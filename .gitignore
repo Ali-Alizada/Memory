@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
