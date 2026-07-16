@@ -1,0 +1,102 @@
+@import "/src/scss/abstract/variablen";
+
+.screen {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.home {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: $home_background;
+    color: $home_color;
+
+
+    &__header {
+        margin-bottom: 6rem;
+
+        p {
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        h1 {
+            font-size: 9.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+    }
+}
+
+
+.stadia_controller {
+    position: absolute;
+    top: auto;
+    bottom: 5rem;
+    left: 0;
+    right: auto;
+}
+
+.home__footer {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// Buttons kann später ausgelagert weredn!
+
+.btn {
+    width: 250px;
+    height: 98px;
+    font-size: 40px;
+    font-weight: 700;
+    background: $button_color;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+
+    &:hover {
+        transform: translateY(-1px) scale(1.03);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+
+        .game-icon {
+            transform: rotate(-20deg);
+        }
+
+        .arrow-icon {
+            transform: translateX(3px) scale(1.15);
+            width: 50px;
+            height: 70px;
+        }
+    }
+
+
+    .game-icon {
+        transition: transform 300ms ease;
+    }
+
+    .arrow-icon {
+        transition:
+            transform 300ms ease,
+            width 300ms ease,
+            height 300ms ease;
+    }
+}

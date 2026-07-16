@@ -1,3 +1,13 @@
 // @ts-ignore
-import '../scss/style.scss';
-document.getElementById('title')!.innerText = "Hier bin ich als title Text text text, ist hier alles NUR zum testen!";
+import "../scss/style.scss";
+
+// @ts-ignore
+import "../scss/components/_home.scss";
+
+import { renderHome } from "./components/_home";
+
+const app = document.getElementById("app")!;
+
+renderHome(app);
+
+
