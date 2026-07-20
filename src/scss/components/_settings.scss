@@ -18,14 +18,14 @@
     align-content: center;
 
     &__header {
-         padding-bottom: 5rem;
+        padding-bottom: 5rem;
 
         h2 {
             font-size: 3.5rem;
             font-weight: 700;
         }
 
-        img{
+        img {
             height: 1.2rem;
             width: auto;
         }
@@ -58,14 +58,43 @@
             padding: 1rem 2rem 5rem 2rem;
             gap: 8px;
 
+            >div {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                
+            }
+
             label {
                 font-size: 1.25rem;
                 font-weight: 400;
                 cursor: pointer;
+                padding-left: 8px;
+
+                &:hover {
+                    font-weight: 700;
+                }
             }
 
             input {
                 cursor: pointer;
+            }
+
+            img {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.2s ease;
+            }
+
+            >div:hover img {
+                opacity: 1;
+                visibility: visible;
+            
+            }
+
+            input:checked+label+img {
+                opacity: 1;
+                visibility: visible;
             }
         }
     }

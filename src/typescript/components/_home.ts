@@ -1,4 +1,4 @@
-import { renderSettings } from "./_settings";
+import { renderSettings } from "./settings/_settings";
 
 export function renderHome(app: HTMLElement): void {
   app.innerHTML = `

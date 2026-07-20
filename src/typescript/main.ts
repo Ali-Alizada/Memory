@@ -6,6 +6,7 @@ import "../scss/components/_home.scss";
 //@ts-ignore
 import "../scss/components/_settings.scss";
 
+
 import { renderHome } from "./components/_home";
 
 const app = document.getElementById("app")!;
