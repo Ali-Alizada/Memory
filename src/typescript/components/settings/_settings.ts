@@ -1,10 +1,9 @@
 import { initSettingsEvents } from "./_settingsEvent";
 
 export function renderSettings(app: HTMLElement) {
+  app.innerHTML = `
 
-    app.innerHTML = `
-
-    <div class="container-wrapper">
+        <div class="container-wrapper">
         <!-- conainer-left -->
         <section class="conatiner__left">
 
@@ -74,19 +73,19 @@ export function renderSettings(app: HTMLElement) {
 
                 <div class="radio__buttons">
                     <div>
-                        <input type="radio" id="boardSmall" name="baord" value="boardSmall" checked />
+                        <input type="radio" id="boardSmall" name="board" value="boardSmall" checked />
                         <label for="boardSmall">16 cards</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
 
                     <div>
-                        <input type="radio" id="boardMedium" name="baord" value="boardMedium" checked />
+                        <input type="radio" id="boardMedium" name="board" value="boardMedium" checked />
                         <label for="boardMedium">24 cards</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
 
                     <div>
-                        <input type="radio" id="boardLarge" name="baord" value="boardLarge" checked />
+                        <input type="radio" id="boardLarge" name="board" value="boardLarge" checked />
                         <label for="boardLarge">36 cards</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
@@ -108,14 +107,14 @@ export function renderSettings(app: HTMLElement) {
                     Game theme
                 </button>
 
-                <button class="game__button id="selectedPlayer">
+                <button class="game__button" id="selectedPlayer">
                     <img src="src/assets/images/setting/Line 4.svg" alt="line-icon">
-                    player
+                    <span>Player</span>
                 </button>
 
-                <button class="game__button" id="selectedBoard"
+                <button class="game__button" id="selectedBoard">
                     <img src="src/assets/images/setting/Line 4.svg" alt="line-icon">
-                    Board size
+                       <span>Board size</span>
                 </button>
 
                 <button class="start-btn" id="startBtn" disabled>
@@ -131,7 +130,5 @@ export function renderSettings(app: HTMLElement) {
 
     `;
 
-    initSettingsEvents(app);
-
-    
+  initSettingsEvents(app);
 }

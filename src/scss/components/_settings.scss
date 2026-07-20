@@ -164,4 +164,10 @@
     .start-icon {
         transition: transform 300ms ease;
     }
+
+    &:disabled{
+        opacity: .4;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
 }
