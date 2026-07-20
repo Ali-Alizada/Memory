@@ -1,0 +1,138 @@
+@import "/src/scss/abstract/variablen";
+
+.container-wrapper {
+    width: min(1400px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+}
+
+.setting {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+
+    &__header {
+         padding-bottom: 5rem;
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        img{
+            height: 1.2rem;
+            width: auto;
+        }
+    }
+
+    &__content {
+
+        .game__themes__title,
+        .game__title__players,
+        .game__title__board {
+            display: flex;
+            align-content: center;
+            text-align: center;
+            gap: 10px;
+
+            img {
+                width: 20px;
+                height: 30px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+
+        .radio__buttons {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 2rem 5rem 2rem;
+            gap: 8px;
+
+            label {
+                font-size: 1.25rem;
+                font-weight: 400;
+                cursor: pointer;
+            }
+
+            input {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// container-right
+
+.container-right {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.prew-img {
+    width: 460px;
+    width: 100%;
+    height: auto;
+}
+
+.start__pannel {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+
+    .game__button {
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        gap: 14px;
+        padding-right: 16px;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+}
+
+// btton
+
+.start-btn {
+    width: 130px;
+    height: 55px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: $button_color;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+        .start-icon {
+            transform: rotate(-14deg);
+        }
+    }
+
+    .start-icon {
+        transition: transform 300ms ease;
+    }
+}

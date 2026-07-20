@@ -12,16 +12,16 @@ export function renderHome(app: HTMLElement): void {
             <section class="home__content">
 
                 <button id="playButton" class="btn">
-                    <img class="game-icon" src="src/assets/images/dark/stadia_controller_s.svg" alt="Stadia_controller-icon">
+                    <img class="game-icon" src="src/assets/images/home/stadia_controller_s.svg" alt="Stadia_controller-icon">
                      Play
-                    <img class="arrow-icon" src="src/assets/images/dark/Arrow 1.svg" alt="arrow-icon">
+                    <img class="arrow-icon" src="src/assets/images/home/Arrow 1.svg" alt="arrow-icon">
                     
                 </button>
            
 
             </section>
             
-            <img class="stadia_controller" src="src/assets/images/dark/Stadia_controller.svg" alt="Stadia_controller">
+            <img class="stadia_controller" src="src/assets/images/home/Stadia_controller.svg" alt="Stadia_controller">
 
             <footer class="home__footer">
                 <p>© Memory Game 2026</p>
