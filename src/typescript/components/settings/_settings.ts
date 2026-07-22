@@ -1,4 +1,5 @@
 import { initSettingsEvents } from "./_settingsEvent";
+import { renderGame } from "../../game";
 
 export function renderSettings(app: HTMLElement) {
   app.innerHTML = `
@@ -99,21 +100,24 @@ export function renderSettings(app: HTMLElement) {
 
         <section class="container-right">
 
-            <img id="themPreview" class="prew-img" src="src/assets/images/dark/prew-dark.svg" alt="prew-dark-img">
+        <div class="prew-imgs-container">
+        <img id="themPreview" class="prew-img" src="src/assets/images/dark/prew-dark.svg" alt="prew-dark-img">
+        </div>
 
+            
             <div class="start__pannel">
 
                 <button class="game__button" id="selectedTheme">
-                    Game theme
+                    <span>Game theme</span>
                 </button>
 
                 <button class="game__button" id="selectedPlayer">
-                    <img src="src/assets/images/setting/Line 4.svg" alt="line-icon">
+                    <img src="src/assets/images/setting/Line 5.png" alt="line-icon">
                     <span>Player</span>
                 </button>
 
                 <button class="game__button" id="selectedBoard">
-                    <img src="src/assets/images/setting/Line 4.svg" alt="line-icon">
+                    <img src="src/assets/images/setting/Line 5.png" alt="line-icon">
                        <span>Board size</span>
                 </button>
 
@@ -131,4 +135,10 @@ export function renderSettings(app: HTMLElement) {
     `;
 
   initSettingsEvents(app);
+
+    const startBtn = app.querySelector("#startBtn");
+    startBtn?.addEventListener("click", () => {
+        renderGame(app);
+    });
+
 }

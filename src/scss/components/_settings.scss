@@ -1,7 +1,7 @@
 @import "/src/scss/abstract/variablen";
 
 .container-wrapper {
-    width: min(1400px, 100%);
+    width: min(1440px, 100%);
     min-height: 100vh;
     margin: 0 auto;
 
@@ -103,14 +103,15 @@
 // container-right
 
 .container-right {
+    min-width: 600px;
     padding-top: 5rem;
     display: flex;
     flex-direction: column;
 }
 
-.prew-img {
-    width: 460px;
-    width: 100%;
+ .prew-imgs-container{
+    display: flex;
+    width: 440px;
     height: auto;
 }
 
@@ -118,6 +119,7 @@
     width: 100%;
     display: flex;
     margin-top: 3rem;
+    
 
     .game__button {
         height: 55px;
@@ -125,6 +127,7 @@
         justify-content: center;
         align-items: center;
         border: none;
+        background: transparent;
         cursor: pointer;
         gap: 14px;
         padding-right: 16px;

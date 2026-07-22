@@ -2,8 +2,8 @@ import { gameSettings } from "./_settingState";
 
 const themes = {
     "code-vibes": "src/assets/images/dark/prew-dark.svg",
-    gaming: "src/assets/images/bluedark/prew-darkblue-hover.svg",
-    "da-projects": "src/assets/images/blue/prew-hover-img.svg",
+    gaming: "src/assets/images/blue/prew-darkblue-hover.svg",
+    "da-projects": "src/assets/images/white/prew-hover-img.svg",
     foods: "src/assets/images/orange/prew-hover-img.svg",
 };
 
@@ -128,7 +128,7 @@ function updateStartPanel(app: HTMLElement) {
 
     const playerText = playerBtn.querySelector("span");
     playerText!.textContent = playerNames[gameSettings.player];
-    
+
     const boardText = boardBtn.querySelector("span");
     boardText!.textContent = boardNames[gameSettings.boards];
 

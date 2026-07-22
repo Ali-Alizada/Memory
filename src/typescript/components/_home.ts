@@ -1,7 +1,7 @@
 import { renderSettings } from "./settings/_settings";
 
 export function renderHome(app: HTMLElement): void {
-  app.innerHTML = `
+    app.innerHTML = `
         <section class="screen home">
 
             <header class="home__header">
@@ -29,8 +29,8 @@ export function renderHome(app: HTMLElement): void {
 
         </section>
     `;
-  const playButton = app.querySelector("#playButton");
-  playButton?.addEventListener("click", () => {
-    renderSettings(app);
-  });
+    const playButton = app.querySelector("#playButton");
+    playButton?.addEventListener("click", () => {
+        renderSettings(app);
+    });
 }

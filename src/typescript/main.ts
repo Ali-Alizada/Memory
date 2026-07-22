@@ -5,6 +5,10 @@ import "../scss/style.scss";
 import "../scss/components/_home.scss";
 //@ts-ignore
 import "../scss/components/_settings.scss";
+//@ts-ignore
+import "../scss/components/_game.scss";
+
+
 
 
 import { renderHome } from "./components/_home";
