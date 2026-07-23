@@ -1,0 +1,171 @@
+export interface Card {
+  id: string; // unique card id (per card instance)
+  pairId: number; // id shared by the two matching cards
+  boardKey: string; // which board / card-set this card belongs to
+  asset: string; // image filename or asset key
+  label?: string; // human readable label (optional)
+  alt?: string; // alt text for accessibility (optional)
+
+}
+
+// Exports card sets keyed by a board identifier. This keeps card data
+// independent from board layout and allows adding more boards later.
+export const cardSets: Record<string, Card[]> = {
+    //Code vobes as example board; contains 8 pairs => 16 cards
+  codeVibes: [
+    {
+      id: "cv-html-a",
+      pairId: 1,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/card-green.svg",
+      label: "HTML",
+      alt: "HTML logo",
+
+    },
+    {
+      id: "cv-html-b",
+      pairId: 1,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/card-green.svg",
+      label: "HTML",
+      alt: "HTML logo",
+ 
+    },
+
+    {
+      id: "cv-css-a",
+      pairId: 2,
+      boardKey: "codeVibes",
+      asset: "css.svg",
+      label: "CSS",
+      alt: "CSS logo",
+
+    },
+    {
+      id: "cv-css-b",
+      pairId: 2,
+      boardKey: "codeVibes",
+      asset: "css.svg",
+      label: "CSS",
+      alt: "CSS logo",
+
+    },
+
+    {
+      id: "cv-js-a",
+      pairId: 3,
+      boardKey: "codeVibes",
+      asset: "js.svg",
+      label: "JavaScript",
+      alt: "JavaScript logo",
+
+    },
+    {
+      id: "cv-js-b",
+      pairId: 3,
+      boardKey: "codeVibes",
+      asset: "js.svg",
+      label: "JavaScript",
+      alt: "JavaScript logo",
+
+    },
+
+    {
+      id: "cv-ts-a",
+      pairId: 4,
+      boardKey: "codeVibes",
+      asset: "ts.svg",
+      label: "TypeScript",
+      alt: "TypeScript logo",
+
+    },
+    {
+      id: "cv-ts-b",
+      pairId: 4,
+      boardKey: "codeVibes",
+      asset: "ts.svg",
+      label: "TypeScript",
+      alt: "TypeScript logo",
+
+    },
+
+    {
+      id: "cv-figma-a",
+      pairId: 5,
+      boardKey: "codeVibes",
+      asset: "figma.svg",
+      label: "Figma",
+      alt: "Figma logo",
+
+    },
+    {
+      id: "cv-figma-b",
+      pairId: 5,
+      boardKey: "codeVibes",
+      asset: "figma.svg",
+      label: "Figma",
+      alt: "Figma logo",
+
+    },
+
+    {
+      id: "cv-git-a",
+      pairId: 6,
+      boardKey: "codeVibes",
+      asset: "git.svg",
+      label: "Git",
+      alt: "Git logo",
+
+    },
+    {
+      id: "cv-git-b",
+      pairId: 6,
+      boardKey: "codeVibes",
+      asset: "git.svg",
+      label: "Git",
+      alt: "Git logo",
+
+    },
+
+    {
+      id: "cv-github-a",
+      pairId: 7,
+      boardKey: "codeVibes",
+      asset: "github.svg",
+      label: "GitHub",
+      alt: "GitHub logo",
+
+    },
+    {
+      id: "cv-github-b",
+      pairId: 7,
+      boardKey: "codeVibes",
+      asset: "github.svg",
+      label: "GitHub",
+      alt: "GitHub logo",
+
+    },
+
+    {
+      id: "cv-react-a",
+      pairId: 8,
+      boardKey: "codeVibes",
+      asset: "react.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 8,
+      boardKey: "codeVibes",
+      asset: "react.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+  ],
+};
+
+// Backwards-compatible simple filename list (keeps previous API working)
+export const codeVibesCards = cardSets.codeVibes.map((c) => c.asset);

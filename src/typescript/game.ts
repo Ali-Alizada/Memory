@@ -1,5 +1,7 @@
+import { createExitOverlay } from "./components/overlay";
 import { renderHome } from "./components/_home";
-
+import { createBoard } from "./components/board";
+import { gameSettings } from "./components/settings/_settingState";
 
 export function renderGame(app: HTMLElement) {
     app.innerHTML = `
@@ -8,13 +10,13 @@ export function renderGame(app: HTMLElement) {
         <section class="screen game">
             <header class="game__header">
                 <div class="scrore__container">
-                      <img class="blue__icon" src="src/assets/images/dark/label-blue.svg" alt="blue-scrore-icon">
-                        <p>Blue</p>
-                        <span>0</span>
+                    <img class="blue__icon" src="src/assets/images/dark/label-blue.svg" alt="blue-scrore-icon">
+                    <p>Blue</p>
+                    <span>0</span>
 
-                      <img class="orange__icon" src="src/assets/images/dark/label-orange.svg" alt="orange-score-icon">
-                        <p>Orange</p>
-                        <span>6</span>
+                    <img class="orange__icon" src="src/assets/images/dark/label-orange.svg" alt="orange-score-icon">
+                    <p>Orange</p>
+                    <span>6</span>
                 </div>
 
                 <h2>
@@ -32,48 +34,23 @@ export function renderGame(app: HTMLElement) {
                 <div class="board"></div>
             </main>
 
-
-            <div id="exit-message" class="overlay hidden">
-                <div class="overlay__content">
-                    <p>Are you sure you want to quite <br>the game?</p>
-                    
-                    <div class="overlayBtns">
-                          <button class="stay-btn">Back to game</button>
-                          <button class="back-btn">Exit game</button>
-                    </div>
-                  
-                </div>
-            </div>
-
-
         </section>
 
-
     </div>
-    
     `;
 
+    const boardRoot = app.querySelector(".board");
+    if (boardRoot) {
+        boardRoot.appendChild(createBoard(gameSettings.theme, gameSettings.boards));
+    }
 
-
-    const exitOverlayBtn = app.querySelector("#exit-btn");
-    const overlay = app.querySelector("#exit-message");
-    exitOverlayBtn?.addEventListener("click", ()=> {
-        overlay?.classList.remove("hidden");
+    const overlay = createExitOverlay(app, () => {
+        renderHome(app);
     });
 
-
-        const stayBtn = app.querySelector(".stay-btn");
-        stayBtn?.addEventListener("click", ()=> {
-            overlay?.classList.add("hidden");
-        });
-
-
-        const backBtn = app.querySelector(".back-btn");
-
-        backBtn?.addEventListener("click", ()=> {
-            renderHome(app);
-        });
-
-
+    const extBtn = app.querySelector("#exit-btn");
+    extBtn?.addEventListener("click", () => {
+        overlay?.classList.remove("hidden");
+    });
 }
 

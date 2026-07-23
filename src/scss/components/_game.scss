@@ -82,58 +82,104 @@
     }
 }
 
-.overlay{
-    width: 540px;
-    height: 270px;
-    background-color:$color;
-    
-    &__content{
+.board {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-grid {
+    width: min(100%, 1100px);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    min-height: 140px;
+    min-width: 140px;
+    // border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card__label {
+    text-align: center;
+    line-height: 1.3;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+
+    &__content {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        width: 540px;
+        height: 270px;
         padding: 3rem 2rem;
+        background-color: $color;
+        box-sizing: border-box;
 
-        p{
+        p {
             font-size: 2rem;
             font-weight: 700;
             text-align: center;
             padding-bottom: 2rem;
         }
-
     }
 
-       .overlayBtns{  
-        display: flex; 
+    .overlayBtns {
+        display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: center;
         gap: 1rem;
 
-        
-        button{
+        button {
             font-size: 20px;
             font-weight: 700;
             gap: 10px;
             padding: 0.7rem 1rem;
             cursor: pointer;
             border: none;
+        }
 
-            }
+        .stay-btn {
+            background: $cards_primary;
+            color: $color;
+        }
 
-            .stay-btn{
-                background:$cards_primary;
-                color: $color;
-            }
-
-            .back-btn{
-                background: $color;
-                color: $cards_primary;
-                border: 1px solid $cards_primary;
-            }
+        .back-btn {
+            background: $color;
+            color: $cards_primary;
+            border: 1px solid $cards_primary;
+        }
     }
-
 }
 
-.hidden{
+.hidden {
     display: none;
 }
