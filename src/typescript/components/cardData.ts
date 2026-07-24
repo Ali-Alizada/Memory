@@ -11,13 +11,13 @@ export interface Card {
 // Exports card sets keyed by a board identifier. This keeps card data
 // independent from board layout and allows adding more boards later.
 export const cardSets: Record<string, Card[]> = {
-    //Code vobes as example board; contains 8 pairs => 16 cards
+    //Code vibes as example board; contains 8 pairs => 16 cards
   codeVibes: [
     {
       id: "cv-html-a",
       pairId: 1,
       boardKey: "codeVibes",
-      asset: "src/assets/images/dark/card-green.svg",
+      asset: "src/assets/images/dark/htmlL.svg",
       label: "HTML",
       alt: "HTML logo",
 
@@ -26,7 +26,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-html-b",
       pairId: 1,
       boardKey: "codeVibes",
-      asset: "src/assets/images/dark/card-green.svg",
+      asset: "src/assets/images/dark/htmlL.svg",
       label: "HTML",
       alt: "HTML logo",
  
@@ -36,7 +36,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-css-a",
       pairId: 2,
       boardKey: "codeVibes",
-      asset: "css.svg",
+      asset: "src/assets/images/dark/CSSL.svg",
       label: "CSS",
       alt: "CSS logo",
 
@@ -45,7 +45,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-css-b",
       pairId: 2,
       boardKey: "codeVibes",
-      asset: "css.svg",
+      asset: "src/assets/images/dark/CSSL.svg",
       label: "CSS",
       alt: "CSS logo",
 
@@ -55,7 +55,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-js-a",
       pairId: 3,
       boardKey: "codeVibes",
-      asset: "js.svg",
+      asset: "src/assets/images/dark/JsL.svg",
       label: "JavaScript",
       alt: "JavaScript logo",
 
@@ -64,7 +64,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-js-b",
       pairId: 3,
       boardKey: "codeVibes",
-      asset: "js.svg",
+      asset: "src/assets/images/dark/JsL.svg",
       label: "JavaScript",
       alt: "JavaScript logo",
 
@@ -74,7 +74,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-ts-a",
       pairId: 4,
       boardKey: "codeVibes",
-      asset: "ts.svg",
+      asset: "src/assets/images/dark/TsL.svg",
       label: "TypeScript",
       alt: "TypeScript logo",
 
@@ -83,28 +83,28 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-ts-b",
       pairId: 4,
       boardKey: "codeVibes",
-      asset: "ts.svg",
+      asset: "src/assets/images/dark/TsL.svg",
       label: "TypeScript",
       alt: "TypeScript logo",
 
     },
 
     {
-      id: "cv-figma-a",
+      id: "cv-vue-a",
       pairId: 5,
       boardKey: "codeVibes",
-      asset: "figma.svg",
-      label: "Figma",
-      alt: "Figma logo",
+      asset: "src/assets/images/dark/VjsL.svg",
+      label: "Vue",
+      alt: "VueJs logo",
 
     },
     {
-      id: "cv-figma-b",
+      id: "cv-vue-a",
       pairId: 5,
       boardKey: "codeVibes",
-      asset: "figma.svg",
-      label: "Figma",
-      alt: "Figma logo",
+      asset: "src/assets/images/dark/VjsL.svg",
+      label: "Vue",
+      alt: "VueJs logo",
 
     },
 
@@ -112,7 +112,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-git-a",
       pairId: 6,
       boardKey: "codeVibes",
-      asset: "git.svg",
+      asset: "src/assets/images/dark/gitL.svg",
       label: "Git",
       alt: "Git logo",
 
@@ -121,7 +121,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-git-b",
       pairId: 6,
       boardKey: "codeVibes",
-      asset: "git.svg",
+      asset: "src/assets/images/dark/gitL.svg",
       label: "Git",
       alt: "Git logo",
 
@@ -131,7 +131,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-github-a",
       pairId: 7,
       boardKey: "codeVibes",
-      asset: "github.svg",
+      asset: "src/assets/images/dark/GhL.svg",
       label: "GitHub",
       alt: "GitHub logo",
 
@@ -140,7 +140,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-github-b",
       pairId: 7,
       boardKey: "codeVibes",
-      asset: "github.svg",
+      asset: "src/assets/images/dark/GhL.svg",
       label: "GitHub",
       alt: "GitHub logo",
 
@@ -150,7 +150,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-react-a",
       pairId: 8,
       boardKey: "codeVibes",
-      asset: "react.svg",
+      asset: "src/assets/images/dark/RctL.svg",
       label: "React",
       alt: "React logo",
 
@@ -159,7 +159,7 @@ export const cardSets: Record<string, Card[]> = {
       id: "cv-react-b",
       pairId: 8,
       boardKey: "codeVibes",
-      asset: "react.svg",
+      asset: "src/assets/images/dark/RctL.svg",
       label: "React",
       alt: "React logo",
 

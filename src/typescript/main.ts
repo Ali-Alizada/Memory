@@ -7,6 +7,8 @@ import "../scss/components/_home.scss";
 import "../scss/components/_settings.scss";
 //@ts-ignore
 import "../scss/components/_game.scss";
+//@ts-ignore
+import "../scss/components/_cards.scss";
 
 
 

@@ -25,7 +25,7 @@ export function createBoard(theme: string, boardSizeKey: string): HTMLElement {
 
     const selectedCards = cards.slice(0, size);
     const boardEl = document.createElement("div");
-    boardEl.className = "card-grid";
+    boardEl.className = `card-grid card-grid--${boardSizeKey}`;
 
     shuffle(selectedCards).forEach((card) => {
         boardEl.appendChild(createCard(card));
