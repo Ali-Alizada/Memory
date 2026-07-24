@@ -9,6 +9,8 @@ import "../scss/components/_settings.scss";
 import "../scss/components/_game.scss";
 //@ts-ignore
 import "../scss/components/_cards.scss";
+//@ts-ignore
+import "../scss/components/_gameover.scss";
 
 
 

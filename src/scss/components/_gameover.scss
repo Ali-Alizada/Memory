@@ -1,0 +1,65 @@
+@import "../abstract/variablen";
+
+.container__wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .main__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding: 4rem 0 1rem 0;
+            color: $color;
+        }
+
+        .scrore__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            gap: 6px;
+            padding: 1rem;
+            background: $button_dark_background;
+
+            .orange__icon {
+                padding-left: 1rem;
+                
+            }
+
+            .blue {
+                font-size: 24px;
+                font-weight: 700;
+                color:#2bb1ff;
+            }
+
+            .score__b {
+                font-size: 24px;
+                font-weight: 700;
+                color:#2bb1ff;
+            }
+
+
+            .orange {
+                font-size: 24px;
+                font-weight: 700;
+                color: #f58e39;
+            }
+
+            .score__o {
+                font-size: 24px;
+                font-weight: 700;
+                color: #f58e39;
+            }
+       
+        }
+    }
+}

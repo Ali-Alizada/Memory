@@ -2,6 +2,7 @@ import { createExitOverlay } from "./components/overlay";
 import { renderHome } from "./components/_home";
 import { createBoard } from "./components/board";
 import { gameSettings } from "./components/settings/_settingState";
+import { renderGameOver } from "./components/_gameover";
 
 export function renderGame(app: HTMLElement) {
     app.innerHTML = `
@@ -99,7 +100,7 @@ export function renderGame(app: HTMLElement) {
                     const allMatched = Array.from(cardElements).every((c) => c.classList.contains("matched"));
                     if (allMatched) {
                         setTimeout(() => {
-                            showWinnerOverlay(app, scores);
+                            renderGameOver(app, scores);
                         }, 600);
                     }
                 } else {
@@ -129,42 +130,4 @@ export function renderGame(app: HTMLElement) {
     });
 }
 
-function showWinnerOverlay(app: HTMLElement, scores: { bluePlayer: number; orangePlayer: number }) {
-    const overlay = document.createElement("div");
-    overlay.className = "overlay";
-
-    let resultText = "";
-    if (scores.bluePlayer > scores.orangePlayer) {
-        resultText = "Blue Player Wins!";
-    } else if (scores.orangePlayer > scores.bluePlayer) {
-        resultText = "Orange Player Wins!";
-    } else {
-        resultText = "It's a Draw!";
-    }
-
-    overlay.innerHTML = `
-         <div class="overlay__content">
-                    <p style="color: #2f3131;">${resultText}</p>
-                    <div style="margin-bottom: 1.5rem; text-align: center; color: #2f3131; font-weight: 700; font-size: 1.25rem;">
-                        Blue: ${scores.bluePlayer} | Orange: ${scores.orangePlayer}
-                    </div>
-                    <div class="overlayBtns">
-                          <button class="stay-btn" id="play-again-btn">Play Again</button>
-                          <button class="back-btn" id="to-menu-btn">Main Menu</button>
-                    </div>
-        </div>
-    `;
-
-    app.appendChild(overlay);
-
-    overlay.querySelector("#play-again-btn")?.addEventListener("click", () => {
-        overlay.remove();
-        renderGame(app);
-    });
-
-    overlay.querySelector("#to-menu-btn")?.addEventListener("click", () => {
-        overlay.remove();
-        renderHome(app);
-    });
-}
 
