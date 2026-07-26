@@ -1,0 +1,124 @@
+// ─── Winner Screen ────────────────────────────────────────────────────────────
+@import "../abstract/variablen";
+
+.container__wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: unset;
+
+    // Konfetti-Header
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .winner__hero-confetti-img {
+            width: 100%;
+        }
+    }
+
+    .main__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2{
+            font-size: 40px;
+            font-weight: 400;
+            color: white;
+            padding: 0;
+        }
+
+        h3 {
+            font-size: 60px;
+            font-weight: 700;
+            color: white;
+        }
+
+        // ── Gewinnerspezifische Farben ─────────
+        .blue-winner {
+            color: #2bb1ff;
+        }
+
+        .orange-winner {
+            color: #f58e39;
+        }
+
+        .draw {
+            color: #a0a0a0;
+        }
+
+        // ── Icon ───────────────────────
+        .winner-content {
+            img {
+                width: 200px;
+                height: 250px;
+                margin: 60px 0;
+            }
+        }
+
+        // ── Score-Anzeige ─────────────
+        .winner__scores {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+
+            .score {
+                font-size: 24px;
+                font-weight: 700;
+
+                &.blue   { color: #2bb1ff; }
+                &.orange { color: #f58e39; }
+            }
+        }
+
+        .back-btn {
+            background: $button_dark_background;
+            width: 200px;
+            height: 55px;
+            font-size: 24px;
+            font-weight: 700;
+            color:$color;
+            border: solid 1px $cards_primary;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 100px;
+            
+
+            &:hover {
+                box-shadow: 0 0 5px $cards_primary;
+            }
+        }
+    }
+}
+
+.winner.blue-winner, .winner.orange-winner, .draw{
+    background: $background;
+}
+
+.draw{
+    
+    display: flex;
+    align-items:center;
+    .main__container{
+
+        h2{
+            padding:2rem 0 1rem 0;
+        }
+        .winner-content {
+            img {
+                width: 420px;
+                height: auto;
+                margin: 60px 0;
+            }
+        }
+}
+}
+
+

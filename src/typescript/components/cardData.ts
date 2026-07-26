@@ -3,8 +3,8 @@ export interface Card {
   pairId: number; // id shared by the two matching cards
   boardKey: string; // which board / card-set this card belongs to
   asset: string; // image filename or asset key
-  label?: string; // human readable label (optional)
-  alt?: string; // alt text for accessibility (optional)
+  label?: string; // human readable label 
+  alt?: string; // alt text for accessibility 
 
 }
 

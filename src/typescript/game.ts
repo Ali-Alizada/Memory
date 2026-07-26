@@ -8,7 +8,7 @@ export function renderGame(app: HTMLElement) {
     app.innerHTML = `
     <div class="container__wrapper">
         <section class="screen game">
-            <header class="game__header">
+            <header class="game__header-one">
                 <div class="scrore__container">
                     <img class="blue__icon" src="src/assets/images/dark/label-blue.svg" alt="blue-score-icon">
                     <p>Blue</p>
@@ -38,7 +38,7 @@ export function renderGame(app: HTMLElement) {
     `;
 
     // Initialize state
-    let currentPlayer = gameSettings.player; // 'bluePlayer' or 'orangePlayer'
+    let currentPlayer = gameSettings.player; 
     const scores = {
         bluePlayer: 0,
         orangePlayer: 0
@@ -62,7 +62,7 @@ export function renderGame(app: HTMLElement) {
         }
     };
 
-    // Initial render of header values
+
     updateHeader();
 
     if (boardRoot) {
