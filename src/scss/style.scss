@@ -1,3 +1,58 @@
+
+/* red-rose-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Red Rose';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/red-rose-v25-latin-regular.woff2') format('woff2'); 
+}
+/* red-rose-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Red Rose';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/red-rose-v25-latin-700.woff2') format('woff2'); 
+}
+
+/* almarai-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/almarai-v19-latin-regular.woff2') format('woff2');
+}
+
+/* figtree-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/figtree-v9-latin-regular.woff2') format('woff2');
+}
+
+/* klee-one-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Klee One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/klee-one-v13-latin-regular.woff2') format('woff2');
+}
+
+/* orbitron-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/orbitron-v35-latin-regular.woff2') format('woff2');
+}
+
+
 *,
 *::before,
 *::after{

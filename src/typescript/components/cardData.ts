@@ -164,6 +164,187 @@ export const cardSets: Record<string, Card[]> = {
       alt: "React logo",
 
     },
+
+    {
+      id: "cv-react-a",
+      pairId: 9,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/AngL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 9,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/AngL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 10,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/BtsL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 10,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/BtsL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 11,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/CmdL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 11,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/CmdL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 12,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/DbL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 12,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/DbL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 13,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/djL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 13,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/djL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 14,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/FbL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 14,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/FbL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 15,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/NjsL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 15,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/NjsL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 16,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/PtL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 16,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/PtL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 17,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/ScssL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 17,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/ScssL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-a",
+      pairId: 18,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/VSCL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
+    {
+      id: "cv-react-b",
+      pairId: 18,
+      boardKey: "codeVibes",
+      asset: "src/assets/images/dark/VSCL.svg",
+      label: "React",
+      alt: "React logo",
+
+    },
   ],
 };
 

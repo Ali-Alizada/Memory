@@ -1,8 +1,8 @@
 import { createExitOverlay } from "./components/overlay";
-import { renderHome } from "./components/_home";
 import { createBoard } from "./components/board";
 import { gameSettings } from "./components/settings/_settingState";
 import { renderGameOver } from "./components/_gameover";
+import { renderSettings } from "./components/settings/_settings";
 
 export function renderGame(app: HTMLElement) {
     app.innerHTML = `
@@ -121,7 +121,7 @@ export function renderGame(app: HTMLElement) {
     });
 
     const overlay = createExitOverlay(app, () => {
-        renderHome(app);
+        renderSettings(app);
     });
 
     const extBtn = app.querySelector("#exit-btn");
