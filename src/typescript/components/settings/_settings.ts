@@ -22,7 +22,7 @@ export function renderSettings(app: HTMLElement) {
 
                 <div class="radio__buttons">
                     <div>
-                        <input type="radio" id="code-vibes" name="theme" value="code-vibes" checked />
+                        <input type="radio" id="code-vibes" name="theme" value="code-vibes" />
                         <label for="code-vibes">Code vibes themes</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
@@ -54,13 +54,13 @@ export function renderSettings(app: HTMLElement) {
 
                 <div class="radio__buttons">
                     <div>
-                        <input type="radio" id="bluePlayer" name="player" value="bluePlayer" checked />
+                        <input type="radio" id="bluePlayer" name="player" value="bluePlayer" />
                         <label for="bluePlayer">Blue</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
 
                     <div>
-                        <input type="radio" id="orangePlayer" name="player" value="orangePlayer" checked />
+                        <input type="radio" id="orangePlayer" name="player" value="orangePlayer" />
                         <label for="orangePlayer">Orange</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
@@ -74,19 +74,19 @@ export function renderSettings(app: HTMLElement) {
 
                 <div class="radio__buttons">
                     <div>
-                        <input type="radio" id="boardSmall" name="board" value="boardSmall" checked />
+                        <input type="radio" id="boardSmall" name="board" value="boardSmall" />
                         <label for="boardSmall">16 cards</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
 
                     <div>
-                        <input type="radio" id="boardMedium" name="board" value="boardMedium" checked />
+                        <input type="radio" id="boardMedium" name="board" value="boardMedium" />
                         <label for="boardMedium">24 cards</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
 
                     <div>
-                        <input type="radio" id="boardLarge" name="board" value="boardLarge" checked />
+                        <input type="radio" id="boardLarge" name="board" value="boardLarge" />
                         <label for="boardLarge">36 cards</label>
                         <img src="src/assets/images/setting/Line 3.svg" alt="line-icon">
                     </div>
