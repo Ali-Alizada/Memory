@@ -1,5 +1,4 @@
 import { renderSettings } from "../components/settings/_settings";
-import { renderDraw } from "./_draw"; 
 
 // ─── Typen ────────────────────────────────────────────────────────────────────
 
@@ -41,7 +40,7 @@ export function renderWinner(app: HTMLElement, { winner, scores }: WinnerOptions
     app.innerHTML = `
         <div class="container__wrapper winner ${config.cssClass}">
 
-            <header>
+            <header class="winner__confetti-overlay" aria-hidden="true">
                 <img
                     class="winner__hero-confetti-img"
                     src="${config.confettiSrc}"

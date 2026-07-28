@@ -1,30 +1,46 @@
 // ─── Winner Screen ────────────────────────────────────────────────────────────
 @import "../abstract/variablen";
 
-.container__wrapper {
+.winner.container__wrapper {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     padding: unset;
 
-    // Konfetti-Header
-    header {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .winner__confetti-overlay {
+        position: absolute;
+        inset: 0 0 auto;
+        z-index: 2;
+        height: clamp(18rem, 38vh, 24rem);
+        overflow: hidden;
+        pointer-events: none;
 
         .winner__hero-confetti-img {
-            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: max(100%, 77rem);
+            max-width: none;
+            height: auto;
+            transform: translate(-50%, -115%);
+            animation: confetti-fall 2.1s cubic-bezier(.18, .7, .22, 1) forwards;
         }
     }
 
     .main__container {
+        position: relative;
+        z-index: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        box-sizing: border-box;
+        min-height: 100vh;
+        padding-top: clamp(17rem, 35vh, 22rem);
 
         h2{
             font-size: 40px;
@@ -98,6 +114,25 @@
     }
 }
 
+@keyframes confetti-fall {
+    0% {
+        transform: translate(-50%, -115%) rotate(-2deg);
+    }
+    72% {
+        transform: translate(-50%, 4%) rotate(1deg);
+    }
+    100% {
+        transform: translate(-50%, 0) rotate(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .winner.container__wrapper .winner__hero-confetti-img {
+        animation: none;
+        transform: translate(-50%, 0);
+    }
+}
+
 .winner.blue-winner, .winner.orange-winner, .draw{
     background: $background;
 }
@@ -120,5 +155,4 @@
         }
 }
 }
-
 
