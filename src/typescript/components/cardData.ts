@@ -346,7 +346,27 @@ export const cardSets: Record<string, Card[]> = {
 
     },
   ],
+
+  gaming: createPairs("gaming", [
+    ["Controller", ""], ["Joystick", ""], ["Trophy", ""],
+    ["Target", ""], ["Rocket", ""], ["Alien", ""],
+    ["Robot", ""], ["Dragon", ""], ["Dice", ""],
+    ["Puzzle", ""], ["Crown", ""], ["Lightning", ""],
+    ["Fire", ""], ["Star", ""], ["Gem", ""],
+    ["Shield", ""], ["Sword", ""], ["Flag", ""],
+  ]),
 };
 
-// Backwards-compatible simple filename list (keeps previous API working)
+function createPairs(boardKey: string, pairs: [string, string][]): Card[] {
+  return pairs.flatMap(([name, symbol], index) => ["a", "b"].map((copy) => ({
+    id: `${boardKey}-${index + 1}-${copy}`,
+    pairId: index + 1,
+    boardKey,
+    asset: "",
+    label: symbol,
+    alt: name,
+  })));
+}
+
+
 export const codeVibesCards = cardSets.codeVibes.map((c) => c.asset);

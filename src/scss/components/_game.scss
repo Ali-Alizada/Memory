@@ -187,3 +187,30 @@
 .hidden {
     display: none;
 }
+
+// Theme 2:
+.game-theme--gaming {
+    background: #28576b;
+    font-family: 'Figtree', sans-serif;
+
+    .game__header-one {
+        color: #ffffff;
+
+        .scrore__container {
+            background: #ffffff;
+
+            p, span {
+                color: #28576b;
+            }
+        }
+    }
+
+    .exit-btn {
+        background: #e52885;
+
+        &:hover {
+            border-color: #ff9bca;
+            box-shadow: 0 0 5px #ff9bca;
+        }
+    }
+}

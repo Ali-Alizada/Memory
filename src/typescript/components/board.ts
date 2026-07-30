@@ -3,7 +3,7 @@ import { createCard } from "./cards";
 
 const themeToCardSetKey: Record<string, string> = {
     "code-vibes": "codeVibes",
-    gaming: "codeVibes",
+    gaming: "gaming",
     "da-projects": "codeVibes",
     foods: "codeVibes",
 };
@@ -25,7 +25,7 @@ export function createBoard(theme: string, boardSizeKey: string): HTMLElement {
 
     const selectedCards = cards.slice(0, size);
     const boardEl = document.createElement("div");
-    boardEl.className = `card-grid card-grid--${boardSizeKey}`;
+    boardEl.className = `card-grid card-grid--${boardSizeKey} card-grid--${cardSetKey}`;
 
     shuffle(selectedCards).forEach((card) => {
         boardEl.appendChild(createCard(card));

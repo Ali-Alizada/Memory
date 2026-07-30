@@ -6,7 +6,7 @@ import { renderSettings } from "./components/settings/_settings";
 
 export function renderGame(app: HTMLElement) {
     app.innerHTML = `
-    <div class="container__wrapper">
+    <div class="container__wrapper game-theme--${gameSettings.theme}">
         <section class="screen game">
             <header class="game__header-one">
                 <div class="scrore__container">

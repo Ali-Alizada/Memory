@@ -44,12 +44,37 @@
         .card__cover {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            display: block;
+            background: url("/src/assets/images/dark/card-green.svg") center / cover;
             transition: transform 0.3s ease;
         }
 
         &:hover .card__cover {
             transform: scale(1.05);
+        }
+    }
+
+    // Theme 2: 
+    &--gaming {
+        .card__front .card__cover {
+            background: linear-gradient(145deg, #ff4ca0, #bd0062);
+            border: 2px solid #ff8fc4;
+        }
+
+        .card__back {
+            background: #173f51;
+            border-color: #ff5eaa;
+        }
+
+        .card__label {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            text-shadow: none;
+        }
+
+        &.matched .card__back {
+            border-color: #ffb2d6;
+            background: #23566a;
+            box-shadow: 0 0 15px rgba(255, 94, 170, 0.65);
         }
     }
 
@@ -84,7 +109,7 @@
     }
 }
 
-// Responsive grid configurations
+
 .card-grid {
     &--boardSmall {
         grid-template-columns: repeat(4, minmax(0, 1fr));
