@@ -1,4 +1,4 @@
-import { cardSets } from "./cardData";
+import { cardSets } from "../data/index";
 import { createCard } from "./cards";
 
 const themeToCardSetKey: Record<string, string> = {

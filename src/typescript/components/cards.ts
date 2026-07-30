@@ -1,4 +1,4 @@
-import type { Card } from "./cardData";
+import type { Card } from "../data/types";
 
 export function createCard(card: Card): HTMLElement {
     const cardEl = document.createElement("button");
