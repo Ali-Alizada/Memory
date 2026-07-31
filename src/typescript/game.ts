@@ -19,7 +19,7 @@ export function renderGame(app: HTMLElement) {
                     <span id="score-orange">0</span>
                 </div>
 
-                <h2>
+                <h2 class="game__title">
                     <span class="title">Current Player:</span>
                     <img id="current-player-icon" src="src/assets/images/dark/label-blue.svg" alt="label-currentPlayer-icon">
                 </h2>

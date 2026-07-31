@@ -101,7 +101,7 @@ export function renderSettings(app: HTMLElement) {
         <section class="container-right">
 
         <div class="prew-imgs-container">
-        <img id="themPreview" class="prew-img" src="src/assets/images/dark/prew-dark.svg" alt="prew-dark-img">
+        <img id="themPreview" class="prew-img" src="src/assets/images/gaming/prew-darkblue-hover.svg" alt="prew-dark-img">
         </div>
 
             

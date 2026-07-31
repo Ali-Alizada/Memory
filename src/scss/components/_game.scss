@@ -190,23 +190,61 @@
 
 // Theme 2:
 .game-theme--gaming {
-    background: #28576b;
-    font-family: 'Figtree', sans-serif;
+    background: #294f60;
+    font-family: 'Orbitron', sans-serif;
 
     .game__header-one {
-        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 80px;
+        border: none;
+        background: #535d75;
+        border-radius: 10px;
+        padding: 1rem;
+
+        .game__title{
+            .title {
+                font-size: 2rem;
+                font-weight: 700;
+                color:white
+            }
+
+            img{
+                display: block;
+            }
+        }
+     
+        
 
         .scrore__container {
+            display: flex;
+            align-items: center;
             background: #ffffff;
+            width: 200px;
+            height:56px;
+            border-radius: 10px;
 
-            p, span {
+
+            span {
+                
                 color: #28576b;
+                font-size: 2rem;
+                font-weight: 700;
+                padding-right: 1.5rem;
+                
+            }
+
+            p{
+                display: none;
             }
         }
     }
 
     .exit-btn {
-        background: #e52885;
+        background: transparent;
+        border-radius: 10px;
+        border: 2px solid #e52885;
 
         &:hover {
             border-color: #ff9bca;

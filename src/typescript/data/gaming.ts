@@ -6,7 +6,7 @@ export const gamingCards: Card[] = [
     id:"mario-a",
     pairId:1,
     boardKey:"gaming",
-    asset:"src/assets/images/gaming/mario.svg",
+    asset:"src/assets/images/gaming/1b.svg",
     label:"Mario"
 },
 
@@ -14,7 +14,7 @@ export const gamingCards: Card[] = [
     id:"mario-b",
     pairId:1,
     boardKey:"gaming",
-    asset:"src/assets/images/gaming/mario.svg",
+    asset:"src/assets/images/gaming/1b.svg",
     label:"Mario"
 },
 

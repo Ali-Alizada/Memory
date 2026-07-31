@@ -2,7 +2,7 @@ import { gameSettings } from "./_settingState";
 
 const themes = {
     "code-vibes": "src/assets/images/dark/prew-dark.svg",
-    gaming: "src/assets/images/blue/prew-darkblue-hover.svg",
+    gaming: "src/assets/images/gaming/prew-darkblue-hover.svg",
     "da-projects": "src/assets/images/white/prew-hover-img.svg",
     foods: "src/assets/images/orange/prew-hover-img.svg",
 };
