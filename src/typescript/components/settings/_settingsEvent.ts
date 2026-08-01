@@ -3,8 +3,8 @@ import { gameSettings } from "./_settingState";
 const themes = {
     "code-vibes": "src/assets/images/dark/prew-dark.svg",
     gaming: "src/assets/images/gaming/prew-darkblue-hover.svg",
-    "da-projects": "src/assets/images/white/prew-hover-img.svg",
-    foods: "src/assets/images/da-project/prew-hover-img.svg",
+    "da-projects": "src/assets/images/da-projects/prew-hover-img.svg",
+    foods: "src/assets/images/foods/prew-hover-img.svg",
 };
 
 function updatePreview(preview: HTMLImageElement | null, theme: string) {

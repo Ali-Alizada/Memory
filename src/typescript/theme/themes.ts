@@ -103,7 +103,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     card: {
       width: 120,
       height: 120,
-      coverImage: "src/assets/images/white/prew-hover-img.svg",
+      coverImage: "src/assets/images/foods/prew-hover-img.svg",
     },
     header: {
       blueLabelIcon: "src/assets/images/dark/label-blue.svg",
