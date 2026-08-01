@@ -1,9 +1,12 @@
 import { renderSettings } from "../components/settings/_settings";
-
+import { gameSettings } from "./settings/_settingState";
+import { getThemeConfig } from "../theme/index";
 
 export function renderDraw(app: HTMLElement): void {
+    const themeConfig = getThemeConfig(gameSettings.theme);
+
     app.innerHTML = `
-        <div class="container__wrapper draw">
+        <div class="container__wrapper draw ${themeConfig.cssClass}">
 
             <header>
                 <img
@@ -16,10 +19,10 @@ export function renderDraw(app: HTMLElement): void {
 
             <section class="main__container">
                 <h2 class="winner-text">It's a</h2>
-                <img src="src/assets/images/dark/Draw-text-img.svg" alt="draw-text-img">
+                <img src="${themeConfig.draw.drawTextImg}" alt="draw-text-img">
 
                 <div class="winner-content">
-                    <img src="src/assets/images/dark/Draw-icon.svg" alt="draw-icon">
+                    <img src="${themeConfig.draw.drawIcon}" alt="draw-icon">
                 </div>
 
                 <button class="back-btn" id="back-to-menu">

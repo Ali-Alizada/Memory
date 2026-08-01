@@ -3,29 +3,32 @@ import { createBoard } from "./components/board";
 import { gameSettings } from "./components/settings/_settingState";
 import { renderGameOver } from "./components/_gameover";
 import { renderSettings } from "./components/settings/_settings";
+import { getThemeConfig } from "./theme/index";
 
 export function renderGame(app: HTMLElement) {
+    const themeConfig = getThemeConfig(gameSettings.theme);
+
     app.innerHTML = `
-    <div class="container__wrapper game-theme--${gameSettings.theme}">
+    <div class="container__wrapper ${themeConfig.cssClass}">
         <section class="screen game">
             <header class="game__header-one">
                 <div class="scrore__container">
-                    <img class="blue__icon" src="src/assets/images/dark/label-blue.svg" alt="blue-score-icon">
+                    <img class="blue__icon" src="${themeConfig.header.blueLabelIcon}" alt="blue-score-icon">
                     <p>Blue</p>
                     <span id="score-blue">0</span>
 
-                    <img class="orange__icon" src="src/assets/images/dark/label-orange.svg" alt="orange-score-icon">
+                    <img class="orange__icon" src="${themeConfig.header.orangeLabelIcon}" alt="orange-score-icon">
                     <p>Orange</p>
                     <span id="score-orange">0</span>
                 </div>
 
                 <h2 class="game__title">
                     <span class="title">Current Player:</span>
-                    <img id="current-player-icon" src="src/assets/images/dark/label-blue.svg" alt="label-currentPlayer-icon">
+                    <img id="current-player-icon" src="${themeConfig.header.blueLabelIcon}" alt="label-currentPlayer-icon">
                 </h2>
 
                 <button class="exit-btn" id="exit-btn">
-                    <img class="exit-icon" src="src/assets/images/dark/exit-icon.svg" alt="exit-icon">
+                    <img class="exit-icon" src="${themeConfig.header.exitIcon}" alt="exit-icon">
                     <span>Exit game</span>
                 </button>
             </header>
@@ -38,7 +41,7 @@ export function renderGame(app: HTMLElement) {
     `;
 
     // Initialize state
-    let currentPlayer = gameSettings.player; 
+    let currentPlayer = gameSettings.player || "bluePlayer";
     const scores = {
         bluePlayer: 0,
         orangePlayer: 0
@@ -57,11 +60,10 @@ export function renderGame(app: HTMLElement) {
         if (scoreOrangeEl) scoreOrangeEl.textContent = String(scores.orangePlayer);
         if (currentPlayerIcon) {
             currentPlayerIcon.src = currentPlayer === "bluePlayer"
-                ? "src/assets/images/dark/label-blue.svg"
-                : "src/assets/images/dark/label-orange.svg";
+                ? themeConfig.header.blueLabelIcon
+                : themeConfig.header.orangeLabelIcon;
         }
     };
-
 
     updateHeader();
 
@@ -129,5 +131,3 @@ export function renderGame(app: HTMLElement) {
         overlay?.classList.remove("hidden");
     });
 }
-
-

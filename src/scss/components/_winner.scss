@@ -1,7 +1,7 @@
-// ─── Winner Screen ────────────────────────────────────────────────────────────
-@import "../abstract/variablen";
+@use "../abstract/variablen" as *;
 
-.winner.container__wrapper {
+.winner.container__wrapper,
+.draw.container__wrapper {
     position: relative;
     isolation: isolate;
     overflow: hidden;
@@ -42,7 +42,7 @@
         min-height: 100vh;
         padding-top: clamp(17rem, 35vh, 22rem);
 
-        h2{
+        h2 {
             font-size: 40px;
             font-weight: 400;
             color: white;
@@ -55,7 +55,6 @@
             color: white;
         }
 
-        // ── Giwnner Farben ─────────
         .blue-winner {
             color: #2bb1ff;
         }
@@ -64,31 +63,15 @@
             color: #f58e39;
         }
 
-        .draw {
+        .draw-text {
             color: #a0a0a0;
         }
 
-        // Icons ───────────────────────
         .winner-content {
             img {
                 width: 200px;
                 height: 250px;
                 margin: 60px 0;
-            }
-        }
-
-        // Score-Anzeige ─────────────
-        .winner__scores {
-            display: flex;
-            gap: 2rem;
-            margin-top: 1.5rem;
-
-            .score {
-                font-size: 24px;
-                font-weight: 700;
-
-                &.blue   { color: #2bb1ff; }
-                &.orange { color: #f58e39; }
             }
         }
 
@@ -98,14 +81,13 @@
             height: 55px;
             font-size: 24px;
             font-weight: 700;
-            color:$color;
+            color: $color;
             border: solid 1px $cards_primary;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 100px;
-            
 
             &:hover {
                 box-shadow: 0 0 5px $cards_primary;
@@ -133,19 +115,21 @@
     }
 }
 
-.winner.blue-winner, .winner.orange-winner, .draw{
+.winner.blue-winner,
+.winner.orange-winner,
+.draw {
     background: $background;
 }
 
-.draw{
-    
+.draw {
     display: flex;
-    align-items:center;
-    .main__container{
+    align-items: center;
 
-        h2{
-            padding:2rem 0 1rem 0;
+    .main__container {
+        h2 {
+            padding: 2rem 0 1rem 0;
         }
+
         .winner-content {
             img {
                 width: 420px;
@@ -153,6 +137,107 @@
                 margin: 60px 0;
             }
         }
-}
+    }
 }
 
+// ── Theme Overrides for Winner & Draw ──
+
+// Gaming Theme
+.game-theme--gaming {
+    &.winner, &.draw {
+        background: #1c3044;
+        font-family: 'Orbitron', sans-serif;
+
+        .main__container {
+            h2, h3 {
+                color: #ffffff;
+            }
+
+            .blue-winner {
+                color: #38bdf8;
+            }
+
+            .orange-winner {
+                color: #f43f5e;
+            }
+
+            .back-btn {
+                background: transparent;
+                border: 2px solid #e52885;
+                color: #ffffff;
+                border-radius: 10px;
+
+                &:hover {
+                    border-color: #ff9bca;
+                    box-shadow: 0 0 8px #ff9bca;
+                }
+            }
+        }
+    }
+}
+
+// DA Projects Theme
+.game-theme--da-projects {
+    &.winner, &.draw {
+        background: red;
+        font-family: 'Figtree', sans-serif;
+
+        .main__container {
+            h2, h3 {
+                color: #ffffff;
+            }
+
+            .blue-winner {
+                color: #60a5fa;
+            }
+
+            .orange-winner {
+                color: #fb923c;
+            }
+
+            .back-btn {
+                background: #ffffff;
+                border: 2px solid #2563eb;
+                color: #2563eb;
+                border-radius: 10px;
+
+                &:hover {
+                    background: #eff6ff;
+                }
+            }
+        }
+    }
+}
+
+// Food Theme
+.game-theme--foods {
+    &.winner, &.draw {
+        background: #ea580c;
+        font-family: 'Red Rose', sans-serif;
+
+        .main__container {
+            h2, h3 {
+                color: #ffffff;
+            }
+
+            .blue-winner {
+                color: #7dd3fc;
+            }
+
+            .orange-winner {
+                color: #ffedd5;
+            }
+
+            .back-btn {
+                background: #ffffff;
+                border: 2px solid #ea580c;
+                color: #ea580c;
+                border-radius: 10px;
+
+                &:hover {
+                    background: #fff7ed;
+                }
+            }
+        }
+    }
+}

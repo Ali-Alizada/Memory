@@ -1,6 +1,4 @@
-@import "/src/scss/abstract/variablen";
-
-
+@use "../abstract/variablen" as *;
 
 .home {
     min-height: 100vh;
@@ -9,11 +7,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 2rem;
     background: $background;
     color: $color;
- 
+
     &__header {
         margin-bottom: 6rem;
 
@@ -33,7 +29,6 @@
     }
 }
 
-
 .stadia_controller {
     position: absolute;
     top: auto;
@@ -51,8 +46,6 @@
     text-align: center;
     font-family: 'Almarai';
 }
-
-// Buttons kann später ausgelagert weredn!
 
 .btn {
     width: 250px;
@@ -76,7 +69,6 @@
         transform: translateY(-1px) scale(1.03);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
-
         .game-icon {
             transform: rotate(-20deg);
         }
@@ -87,7 +79,6 @@
             height: 70px;
         }
     }
-
 
     .game-icon {
         transition: transform 300ms ease;

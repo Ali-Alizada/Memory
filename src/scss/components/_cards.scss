@@ -1,4 +1,5 @@
-@import "../abstract/variablen";
+@use "sass:color";
+@use "../abstract/variablen" as *;
 
 .card {
     aspect-ratio: 1 / 1;
@@ -9,7 +10,15 @@
     cursor: pointer;
     outline: none;
     display: block;
-    width: 100%;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
 
     &__inner {
         position: relative;
@@ -40,12 +49,14 @@
 
     &__front {
         background: rgba(255, 255, 255, 0.02);
-        
+
         .card__cover {
             width: 100%;
             height: 100%;
             display: block;
-            background: url("/src/assets/images/dark/card-green.svg") center / cover;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             transition: transform 0.3s ease;
         }
 
@@ -54,40 +65,16 @@
         }
     }
 
-    // Theme 2: 
-    &--gaming {
-        .card__front .card__cover {
-            background: linear-gradient(145deg, #ff4ca0, #bd0062);
-            border: 2px solid #ff8fc4;
-        }
-
-        .card__back {
-            background: #173f51;
-            border-color: #ff5eaa;
-        }
-
-        .card__label {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            text-shadow: none;
-        }
-
-        &.matched .card__back {
-            border-color: #ffb2d6;
-            background: #23566a;
-            box-shadow: 0 0 15px rgba(255, 94, 170, 0.65);
-        }
-    }
-
     &__back {
         transform: rotateY(180deg);
-        background: radial-gradient(circle at center, darken($button_dark_background, 5%) 0%, $button_dark_background 100%);
+        background: radial-gradient(circle at center, color.adjust($button_dark_background, $lightness: -5%) 0%, $button_dark_background 100%);
         color: $color;
         font-size: 1.25rem;
         font-weight: 700;
         font-family: 'Outfit', 'Inter', sans-serif;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
-        
+
         .card__label {
             text-align: center;
             line-height: 1.3;
@@ -98,32 +85,130 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            // border-radius: 6px;
         }
     }
 
     &.matched &__back {
         border-color: $cards_primary;
         box-shadow: 0 0 15px rgba($cards_primary, 0.4), inset 0 0 15px rgba(0, 0, 0, 0.2);
-        background: radial-gradient(circle at center, lighten($button_dark_background, 3%) 0%, darken($button_dark_background, 2%) 100%);
+        background: radial-gradient(circle at center, color.adjust($button_dark_background, $lightness: 3%) 0%, color.adjust($button_dark_background, $lightness: -2%) 100%);
+    }
+
+    // ── Theme 1: Code Vibes ──
+    &--code-vibes {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        min-height: 120px;
+        aspect-ratio: 1 / 1;
+    }
+
+    // ── Theme 2: Gaming (105 × 120 px) ──
+    &--gaming {
+        width: 105px;
+        height: 120px;
+        min-width: 105px;
+        min-height: 120px;
+        aspect-ratio: 105 / 120;
+
+        .card__front {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            overflow: visible;
+
+            .card__cover {
+                background: linear-gradient(45deg, #5b1c41, #c51d6a);
+                border-radius: 12px;
+                box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .card__back {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            overflow: visible;
+
+            .card__icon {
+                display: block;
+                position: absolute;
+                top: -6px;
+                left: -6px;
+                width: 129px;
+                height: 144px;
+                max-width: none;
+                max-height: none;
+                object-fit: contain;
+            }
+        }
+
+        &.matched .card__inner {
+            filter: drop-shadow(0 0 8px rgba(255, 94, 170, 0.85));
+        }
+    }
+
+    // ── Theme 3: DA Projects ──
+    &--da-projects {
+        width: 120px;
+        height: 100px;
+        min-width: 120px;
+        min-height: 100px;
+        aspect-ratio: 1 / 1;
+
+        .card__back {
+            background: #ffffff;
+            border-color: #2b6cb0;
+            color: #1a365d;
+        }
+
+        &.matched .card__back {
+            border-color: #3182ce;
+            box-shadow: 0 0 15px rgba(49, 130, 206, 0.5);
+        }
+    }
+
+    // ── Theme 4: Food ──
+    &--foods {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        min-height: 120px;
+        aspect-ratio: 1 / 1;
+
+        .card__back {
+            background: #fff5eb;
+            border-color: #f97316;
+            color: #7c2d12;
+        }
+
+        &.matched .card__back {
+            border-color: #ea580c;
+            box-shadow: 0 0 15px rgba(234, 88, 12, 0.5);
+        }
     }
 }
 
-
 .card-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    width: min(100%, 1100px);
+    justify-content: center;
+
     &--boardSmall {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(4, auto);
     }
 
     &--boardMedium {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        
+        grid-template-columns: repeat(6, auto);
+
         @media (max-width: 768px) {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(4, auto);
         }
     }
 
     &--boardLarge {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(6, auto);
     }
 }

@@ -45,7 +45,7 @@ export const gamingCards: Card[] = [
     pairId:3,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/2a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
@@ -60,7 +60,7 @@ export const gamingCards: Card[] = [
     pairId:4,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/2b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
@@ -75,14 +75,14 @@ export const gamingCards: Card[] = [
     pairId:5,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/3a.svg",
-    label:"Mario"
+   alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:6,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/3b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -97,7 +97,7 @@ export const gamingCards: Card[] = [
     pairId:7,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/4a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -120,7 +120,7 @@ export const gamingCards: Card[] = [
     pairId:8,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/4b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
@@ -135,14 +135,14 @@ export const gamingCards: Card[] = [
     pairId:9,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/5a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:10,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/5b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -150,14 +150,14 @@ export const gamingCards: Card[] = [
     pairId:10,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/5b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:1,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/6a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -165,14 +165,14 @@ export const gamingCards: Card[] = [
     pairId:11,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/6a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:11,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/6b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -180,14 +180,14 @@ export const gamingCards: Card[] = [
     pairId:12,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/6b.svg",
-    label:"Mario"
+   alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:13,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/7a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -195,14 +195,14 @@ export const gamingCards: Card[] = [
     pairId:13,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/7a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:14,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/7b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -210,14 +210,14 @@ export const gamingCards: Card[] = [
     pairId:14,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/7b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:15,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/8a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -225,14 +225,14 @@ export const gamingCards: Card[] = [
     pairId:15,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/8a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:16,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/8b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -240,14 +240,14 @@ export const gamingCards: Card[] = [
     pairId:16,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/8b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:17,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/9a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -255,14 +255,14 @@ export const gamingCards: Card[] = [
     pairId:17,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/9a.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 {
     id:"gaming-a",
     pairId:18,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/9b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 {
@@ -270,7 +270,7 @@ export const gamingCards: Card[] = [
     pairId:18,
     boardKey:"gaming",
     asset:"src/assets/images/gaming/9b.svg",
-    label:"Mario"
+    alt:"Mario-logo"
 },
 
 ];

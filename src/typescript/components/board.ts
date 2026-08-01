@@ -1,12 +1,7 @@
 import { cardSets } from "../data/index";
+import type { Card } from "../data/types";
 import { createCard } from "./cards";
-
-const themeToCardSetKey: Record<string, string> = {
-    "code-vibes": "codeVibes",
-    gaming: "gaming",
-    "da-projects": "codeVibes",
-    foods: "codeVibes",
-};
+import { getThemeConfig } from "../theme/index";
 
 const boardSizeMap: Record<string, number> = {
     boardSmall: 16,
@@ -18,17 +13,17 @@ function shuffle<T>(items: T[]): T[] {
     return [...items].sort(() => Math.random() - 0.5);
 }
 
-export function createBoard(theme: string, boardSizeKey: string): HTMLElement {
-    const cardSetKey = themeToCardSetKey[theme] ?? "codeVibes";
-    const cards = cardSets[cardSetKey] ?? cardSets.codeVibes;
+export function createBoard(themeId: string, boardSizeKey: string): HTMLElement {
+    const themeConfig = getThemeConfig(themeId);
+    const cards: Card[] = cardSets[themeConfig.key] ?? cardSets.codeVibes;
     const size = boardSizeMap[boardSizeKey] ?? 16;
 
     const selectedCards = cards.slice(0, size);
     const boardEl = document.createElement("div");
-    boardEl.className = `card-grid card-grid--${boardSizeKey} card-grid--${cardSetKey}`;
+    boardEl.className = `card-grid card-grid--${boardSizeKey} card-grid--${themeConfig.id}`;
 
     shuffle(selectedCards).forEach((card) => {
-        boardEl.appendChild(createCard(card));
+        boardEl.appendChild(createCard(card, themeConfig));
     });
 
     return boardEl;

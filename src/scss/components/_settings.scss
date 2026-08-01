@@ -1,10 +1,9 @@
-@import "/src/scss/abstract/variablen";
+@use "../abstract/variablen" as *;
 
 .container-wrapper {
     width: min(1440px, 100%);
     min-height: 100vh;
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +33,6 @@
     }
 
     &__content {
-
         .game__themes__title,
         .game__title__players,
         .game__title__board {
@@ -64,7 +62,6 @@
                 display: flex;
                 align-items: center;
                 gap: 8px;
-                
             }
 
             label {
@@ -91,7 +88,6 @@
             >div:hover img {
                 opacity: 1;
                 visibility: visible;
-            
             }
 
             input:checked+label+img {
@@ -102,8 +98,6 @@
     }
 }
 
-// container-right
-
 .container-right {
     min-width: 600px;
     padding-top: 5rem;
@@ -111,7 +105,7 @@
     flex-direction: column;
 }
 
- .prew-imgs-container{
+.prew-imgs-container {
     display: flex;
     width: 460px;
     height: auto;
@@ -123,14 +117,13 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 3rem;
-    padding:1rem;
+    padding: 1rem;
     background: #f0f0f0;
     transition: opacity 0.2s ease;
 
     &--disabled {
         opacity: 0.55;
     }
-    
 
     .game__button {
         height: 55px;
@@ -149,8 +142,6 @@
         }
     }
 }
-
-// btton
 
 .start-btn {
     width: 130px;
@@ -183,7 +174,7 @@
         transition: transform 300ms ease;
     }
 
-    &:disabled{
+    &:disabled {
         opacity: .4;
         cursor: not-allowed;
         pointer-events: none;

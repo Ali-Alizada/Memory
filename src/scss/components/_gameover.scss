@@ -1,4 +1,4 @@
-@import "../abstract/variablen";
+@use "../abstract/variablen" as *;
 
 .container__wrapper {
     width: 100%;
@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
 
-    // ── Scope: NUR Game-Over-Screen ──────────────────────────────────────────
     .game-over {
         .main__container {
             display: flex;
@@ -59,6 +58,61 @@
                     font-size: 24px;
                     font-weight: 700;
                     color: #f58e39;
+                }
+            }
+        }
+    }
+
+    // ── Theme Overrides for Game Over ──
+    &.game-theme--gaming {
+        background: #1c3044;
+
+        .game-over {
+            .main__container {
+                h2 {
+                    color: #ff8fc4;
+                    font-family: 'Orbitron', sans-serif;
+                }
+
+                .scrore__container {
+                    background: #ffffff;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    &.game-theme--da-projects {
+        background: white;
+
+        .game-over {
+            .main__container {
+                h2 {
+                    color: #ffffff;
+                    font-family: 'Figtree', sans-serif;
+                }
+
+                .scrore__container {
+                    background: #ffffff;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    &.game-theme--foods {
+        background: #ea580c;
+
+        .game-over {
+            .main__container {
+                h2 {
+                    color: #ffffff;
+                    font-family: 'Red Rose', sans-serif;
+                }
+
+                .scrore__container {
+                    background: #fff5eb;
+                    border-radius: 10px;
                 }
             }
         }
