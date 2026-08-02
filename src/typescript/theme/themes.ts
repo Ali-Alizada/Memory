@@ -18,6 +18,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       exitIcon: "src/assets/images/dark/exit-icon.svg",
     },
     winner: {
+      showConfetti: true,
       confettiSrc: "src/assets/images/dark/Confetti.svg",
       blueWinnerIcon: "src/assets/images/dark/blue-winner-icon.svg",
       orangeWinnerIcon: "src/assets/images/dark/orange-winner-icon.svg",
@@ -49,7 +50,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       exitIcon: "src/assets/images/dark/exit-icon.svg",
     },
     winner: {
-      confettiSrc: "src/assets/images/dark/Confetti.svg",
+      showConfetti: false,
+      confettiSrc: "",
       blueWinnerIcon: "src/assets/images/gaming/pockal 1.svg",
       orangeWinnerIcon: "src/assets/images/gaming/pockal 1.svg",
     },
@@ -80,7 +82,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       exitIcon: "src/assets/images/dark/exit-icon.svg",
     },
     winner: {
-      confettiSrc: "src/assets/images/dark/Confetti.svg",
+      showConfetti: false,
+      confettiSrc: "",
       blueWinnerIcon: "src/assets/images/dark/blue-winner-icon.svg",
       orangeWinnerIcon: "src/assets/images/dark/orange-winner-icon.svg",
     },
@@ -111,7 +114,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       exitIcon: "src/assets/images/dark/exit-icon.svg",
     },
     winner: {
-      confettiSrc: "src/assets/images/dark/Confetti.svg",
+      showConfetti: false,
+      confettiSrc: "",
       blueWinnerIcon: "src/assets/images/dark/blue-winner-icon.svg",
       orangeWinnerIcon: "src/assets/images/dark/orange-winner-icon.svg",
     },

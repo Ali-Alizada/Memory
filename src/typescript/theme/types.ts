@@ -13,6 +13,7 @@ export interface CardTheme {
 }
 
 export interface WinnerTheme {
+  showConfetti: boolean;
   confettiSrc: string;
   blueWinnerIcon: string;
   orangeWinnerIcon: string;

@@ -29,6 +29,13 @@ const assets = [
   { asset: "src/assets/images/gaming/9b.svg", label: "Console", alt: "Game Console" },
 ];
 
+
+export const gamingCardsWinner = {
+  showConfetti: false,
+  confettiSrc: "",
+  blueWinnerIcon: "...",
+};
+
 export const gamingCards: Card[] = assets.flatMap((item, index) => {
   const pairId = index + 1;
 

@@ -21,9 +21,15 @@ const assets = [
   { asset: "src/assets/images/dark/VSCL.svg", label: "VS Code", alt: "VS Code logo" },
 ];
 
+export const codeVibesWinner = {
+  showConfetti: true,
+  confettiSrc: "src/assets/images/dark/confetti.svg",
+  blueWinnerIcon: "...",
+  orangeWinnerIcon: "...",
+};
+
 export const codeVibesCards: Card[] = assets.flatMap((item, index) => {
   const pairId = index + 1;
-
   return [
     {
       id: `cv-${pairId}-a`,
