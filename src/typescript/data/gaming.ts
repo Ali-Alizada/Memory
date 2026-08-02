@@ -1,276 +1,53 @@
 import type { Card } from "./types";
 
-export const gamingCards: Card[] = [
+const assets = [
+  { asset: "src/assets/images/gaming/1a.svg", label: "Mario", alt: "Mario logo" },
+  { asset: "src/assets/images/gaming/1b.svg", label: "Luigi", alt: "Luigi logo" },
 
-{
-    id:"g-mario-a",
-    pairId:1,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/1b.svg",
-    alt:"Mario-logo"
-},
+  { asset: "src/assets/images/gaming/2a.svg", label: "Pac-Man", alt: "Pac-Man logo" },
+  { asset: "src/assets/images/gaming/2b.svg", label: "Ghost", alt: "Ghost logo" },
 
-{
-    id:"g-mario-b",
-    pairId:1,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/1b.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"g-marioa-a",
-    pairId:2,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/1a.svg",
-    alt:"Mario-logo"
-},
+  { asset: "src/assets/images/gaming/3a.svg", label: "Sonic", alt: "Sonic logo" },
+  { asset: "src/assets/images/gaming/3b.svg", label: "Tails", alt: "Tails logo" },
 
-{
-    id:"g-marioa-a",
-    pairId:2,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/1a.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:3,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/2a.svg",
-    alt:"Mario-logo"
-},
+  { asset: "src/assets/images/gaming/4a.svg", label: "Pikachu", alt: "Pikachu logo" },
+  { asset: "src/assets/images/gaming/4b.svg", label: "Poké Ball", alt: "Poké Ball logo" },
 
-{
-    id:"gaming-b",
-    pairId:3,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/2a.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:4,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/2b.svg",
-    label:"Mario"
-},
+  { asset: "src/assets/images/gaming/5a.svg", label: "Master Sword", alt: "Master Sword" },
+  { asset: "src/assets/images/gaming/5b.svg", label: "Triforce", alt: "Triforce" },
 
-{
-    id:"gaming-b",
-    pairId:4,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/2b.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:5,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/3a.svg",
-    label:"Mario"
-},
+  { asset: "src/assets/images/gaming/6a.svg", label: "Creeper", alt: "Minecraft Creeper" },
+  { asset: "src/assets/images/gaming/6b.svg", label: "Diamond", alt: "Minecraft Diamond" },
 
-{
-    id:"gaming-b",
-    pairId:5,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/3a.svg",
-   alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:6,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/3b.svg",
-    alt:"Mario-logo"
-},
+  { asset: "src/assets/images/gaming/7a.svg", label: "Controller", alt: "Game Controller" },
+  { asset: "src/assets/images/gaming/7b.svg", label: "Joystick", alt: "Arcade Joystick" },
 
-{
-    id:"gaming-b",
-    pairId:6,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/3b.svg",
-    label:"Mario"
-},
-{
-    id:"gaming-a",
-    pairId:7,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/4a.svg",
-    alt:"Mario-logo"
-},
+  { asset: "src/assets/images/gaming/8a.svg", label: "Coin", alt: "Game Coin" },
+  { asset: "src/assets/images/gaming/8b.svg", label: "Trophy", alt: "Gaming Trophy" },
 
-{
-    id:"gaming-b",
-    pairId:7,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/4a.svg",
-    label:"Mario"
-},
-{
-    id:"gaming-a",
-    pairId:8,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/4b.svg",
-    label:"Mario"
-},
-
-{
-    id:"gaming-b",
-    pairId:8,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/4b.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:9,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/5a.svg",
-    label:"Mario"
-},
-
-{
-    id:"gaming-b",
-    pairId:9,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/5a.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:10,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/5b.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:10,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/5b.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:1,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/6a.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:11,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/6a.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:11,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/6b.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:12,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/6b.svg",
-   alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:13,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/7a.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:13,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/7a.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:14,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/7b.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:14,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/7b.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:15,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/8a.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:15,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/8a.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:16,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/8b.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:16,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/8b.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:17,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/9a.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:17,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/9a.svg",
-    alt:"Mario-logo"
-},
-{
-    id:"gaming-a",
-    pairId:18,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/9b.svg",
-    alt:"Mario-logo"
-},
-
-{
-    id:"gaming-b",
-    pairId:18,
-    boardKey:"gaming",
-    asset:"src/assets/images/gaming/9b.svg",
-    alt:"Mario-logo"
-},
-
+  { asset: "src/assets/images/gaming/9a.svg", label: "Game Boy", alt: "Game Boy" },
+  { asset: "src/assets/images/gaming/9b.svg", label: "Console", alt: "Game Console" },
 ];
+
+export const gamingCards: Card[] = assets.flatMap((item, index) => {
+  const pairId = index + 1;
+
+  return [
+    {
+      id: `gm-${pairId}-a`,
+      pairId,
+      boardKey: "gaming",
+      asset: item.asset,
+      label: item.label,
+      alt: item.alt,
+    },
+    {
+      id: `gm-${pairId}-b`,
+      pairId,
+      boardKey: "gaming",
+      asset: item.asset,
+      label: item.label,
+      alt: item.alt,
+    },
+  ];
+});
