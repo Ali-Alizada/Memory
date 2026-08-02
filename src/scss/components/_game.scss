@@ -181,6 +181,8 @@
 
             img {
                 display: block;
+                height: 40px;
+                width: 40px;
             }
         }
 
@@ -202,6 +204,11 @@
             p {
                 display: none;
             }
+
+            img{
+                height: 28px;
+                width: 22px;
+            }
         }
     }
 
@@ -211,12 +218,23 @@
         border: 2px solid #e52885;
 
         &:hover {
-            border-color: #ff9bca;
-            box-shadow: 0 0 5px #ff9bca;
+            border-color: #b91e67;
+            box-shadow: 0 0 5px #b91e67;    
+        
+           img {
+            filter: brightness(0) saturate(100%) invert(21%) sepia(93%)
+                    saturate(2628%) hue-rotate(319deg) brightness(92%)
+                    contrast(94%);
         }
-
+        }
+        
         span {
             color: #ffffff;
+        }
+
+        img{
+            height: 30px;
+            width: 30px;
         }
     }
 }

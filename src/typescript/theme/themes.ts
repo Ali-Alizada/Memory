@@ -44,8 +44,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       coverImage: "src/assets/images/gaming/prew-darkblue-hover.svg",
     },
     header: {
-      blueLabelIcon: "src/assets/images/dark/label-blue.svg",
-      orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
+      blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
+      orangeLabelIcon: "src/assets/images/gaming/chess_pawn-orange.svg",
       exitIcon: "src/assets/images/dark/exit-icon.svg",
     },
     winner: {
