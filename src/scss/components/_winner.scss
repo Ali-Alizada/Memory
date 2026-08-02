@@ -135,6 +135,7 @@
                 width: 420px;
                 height: auto;
                 margin: 60px 0;
+
             }
         }
     }
@@ -149,8 +150,9 @@
         font-family: 'Orbitron', sans-serif;
 
         .main__container {
-            h2, h3 {
-                color: #ffffff;
+            h2{
+                padding-bottom: 26px;
+                color: white;
             }
 
             .blue-winner {
@@ -172,6 +174,17 @@
                     box-shadow: 0 0 8px #ff9bca;
                 }
             }
+
+                 .winner-content {
+                        img {
+                            width: 340px;
+                            height: 272px;
+                            // margin: 26px;
+                        }
+                    }
+                
+            
+
         }
     }
 }

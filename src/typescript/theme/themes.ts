@@ -35,7 +35,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
   gaming: {
     id: "gaming",
     key: "gaming",
-    name: "Gaming",
+    name: "Gaming", 
     cssClass: "game-theme--gaming",
     fontFamily: "'Orbitron', sans-serif",
     card: {
@@ -50,17 +50,17 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     },
     winner: {
       confettiSrc: "src/assets/images/dark/Confetti.svg",
-      blueWinnerIcon: "src/assets/images/dark/blue-winner-icon.svg",
-      orangeWinnerIcon: "src/assets/images/dark/orange-winner-icon.svg",
+      blueWinnerIcon: "src/assets/images/gaming/pockal 1.svg",
+      orangeWinnerIcon: "src/assets/images/gaming/pockal 1.svg",
     },
     draw: {
-      drawTextImg: "src/assets/images/dark/Draw-text-img.svg",
-      drawIcon: "src/assets/images/dark/Draw-icon.svg",
+      drawTextImg: "src/assets/images/gaming/DRAW.svg",
+      drawIcon: "src/assets/images/gaming/Scale_Icon.svg",
     },
     gameOver: {
-      heroImg: "src/assets/images/dark/Game over-green.svg",
-      blueLabelIcon: "src/assets/images/dark/label-blue.svg",
-      orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
+      heroImg: "src/assets/images/gaming/GAME OVER.svg",
+      blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
+      orangeLabelIcon: "src/assets/images/gaming/chess_pawn-orange.svg",
     },
   },
   "da-projects": {
@@ -89,7 +89,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       drawIcon: "src/assets/images/dark/Draw-icon.svg",
     },
     gameOver: {
-      heroImg: "src/assets/images/dark/Game over-green.svg",
+      heroImg: "src/assets/images/gaming/GAME OVER.svg",
       blueLabelIcon: "src/assets/images/dark/label-blue.svg",
       orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
     },
@@ -120,7 +120,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       drawIcon: "src/assets/images/dark/Draw-icon.svg",
     },
     gameOver: {
-      heroImg: "src/assets/images/dark/Game over-green.svg",
+      heroImg: "src/assets/images/gaming/GAME OVER.svg",
       blueLabelIcon: "src/assets/images/dark/label-blue.svg",
       orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
     },

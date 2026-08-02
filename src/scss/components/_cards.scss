@@ -30,8 +30,9 @@
         transform-style: preserve-3d;
     }
 
-    &.flipped &__inner {
-        transform: rotateY(180deg);
+    &.flipped &__inner,
+    &.matched &__inner {
+        transform: rotateY(180deg) !important;
     }
 
     &__front,
@@ -145,6 +146,7 @@
         }
 
         &.matched .card__inner {
+            // transform: rotateY(180deg) !important;
             filter: drop-shadow(0 0 8px rgba(255, 94, 170, 0.85));
         }
     }
