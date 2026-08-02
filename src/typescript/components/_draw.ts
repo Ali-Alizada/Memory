@@ -4,6 +4,7 @@ import { getThemeConfig } from "../theme/index";
 
 export function renderDraw(app: HTMLElement): void {
     const themeConfig = getThemeConfig(gameSettings.theme);
+    const backButtonText = gameSettings.theme === "code-vibes" ? "Back to start" : "Home";
 
     app.innerHTML = `
         <div class="container__wrapper draw ${themeConfig.cssClass}">
@@ -26,7 +27,7 @@ export function renderDraw(app: HTMLElement): void {
                 </div>
 
                 <button class="back-btn" id="back-to-menu">
-                    Back to start
+                    ${backButtonText}
                 </button>
             </section>
 
