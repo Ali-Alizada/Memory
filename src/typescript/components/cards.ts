@@ -15,10 +15,15 @@ export function createCard(card: Card, themeConfig: ThemeConfig): HTMLElement {
            <span class="card__label" style="display: none;">${card.label ?? card.asset}</span>`
         : `<span class="card__label">${card.label ?? "?"}</span>`;
 
+    const shouldUseCoverImage = themeConfig.id !== "gaming" && Boolean(themeConfig.card.coverImage);
+    const coverStyle = shouldUseCoverImage
+        ? `style="background-image: url('${themeConfig.card.coverImage}')"`
+        : "";
+
     cardEl.innerHTML = `
         <div class="card__inner">
             <div class="card__front">
-                <span class="card__cover" aria-hidden="true"></span>
+                <span class="card__cover" aria-hidden="true" ${coverStyle}></span>
             </div>
             <div class="card__back">
                 ${cardBack}
