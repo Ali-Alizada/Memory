@@ -66,6 +66,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       orangeLabelIcon: "src/assets/images/gaming/chess_pawn-orange.svg",
     },
   },
+
   "da-projects": {
     id: "da-projects",
     key: "daProjects",
@@ -85,19 +86,20 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     winner: {
       showConfetti: false,
       confettiSrc: "",
-      blueWinnerIcon: "src/assets/images/dark/blue-winner-icon.svg",
-      orangeWinnerIcon: "src/assets/images/dark/orange-winner-icon.svg",
+      blueWinnerIcon: "src/assets/images/da-projects/blue-Player-icon.svg",
+      orangeWinnerIcon: "src/assets/images/da-projects/orange-winner-icon.svg",
     },
     draw: {
-      drawTextImg: "src/assets/images/dark/Draw-text-img.svg",
-      drawIcon: "src/assets/images/dark/Draw-icon.svg",
+      drawTextImg: "src/assets/images/da-projects/DRAW.svg",
+      drawIcon: "src/assets/images/da-projects/Scale_icon.svg",
     },
     gameOver: {
-      heroImg: "src/assets/images/gaming/GAME OVER.svg",
+      heroImg: "src/assets/images/da-projects/GAME OVER.svg",
       blueLabelIcon: "src/assets/images/dark/label-blue.svg",
       orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
     },
   },
+
   foods: {
     id: "foods",
     key: "foods",
@@ -117,15 +119,15 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     winner: {
       showConfetti: false,
       confettiSrc: "",
-      blueWinnerIcon: "src/assets/images/dark/blue-winner-icon.svg",
-      orangeWinnerIcon: "src/assets/images/dark/orange-winner-icon.svg",
+      blueWinnerIcon: "src/assets/images/foods/Player-illustration-blue.svg",
+      orangeWinnerIcon: "src/assets/images/foods/Player illustration.svg",
     },
     draw: {
-      drawTextImg: "src/assets/images/dark/Draw-text-img.svg",
-      drawIcon: "src/assets/images/dark/Draw-icon.svg",
+      drawTextImg: "src/assets/images/foods/DRAW.svg",
+      drawIcon: "src/assets/images/foods/scale_icon.svg",
     },
     gameOver: {
-      heroImg: "src/assets/images/gaming/GAME OVER.svg",
+      heroImg: "src/assets/images/foods/Game over.svg",
       blueLabelIcon: "src/assets/images/dark/label-blue.svg",
       orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
     },
