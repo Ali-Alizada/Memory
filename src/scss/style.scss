@@ -87,6 +87,23 @@
   src: url('../fonts/orbitron-v35-latin-700.woff2') format('woff2');
 }
 
+/* delius-unicase-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Delius Unicase';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/delius-unicase-v30-latin-regular.woff2') format('woff2'); 
+}
+/* delius-unicase-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Delius Unicase';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/delius-unicase-v30-latin-700.woff2') format('woff2');
+}
+
 *,
 *::before,
 *::after{

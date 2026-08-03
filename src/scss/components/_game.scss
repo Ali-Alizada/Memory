@@ -204,6 +204,7 @@
                 font-size: 2rem;
                 font-weight: 700;
                 padding-right: 1.5rem;
+                
             }
 
             p {
@@ -288,29 +289,42 @@
     background: white;
     font-family: 'Figtree', sans-serif;
 
-    .game__header-one {
+   .game__header-one {
         display: flex;
         justify-content: space-between;
         width: 90%;
         height: 80px;
+        border: none;
         background: #f0f3f4;
-        border: 1px solid #cbd5e1;
         border-radius: 10px;
         padding: 1rem;
-        color: #1e293b;
+        color: #097fc5;
+       
 
-        .game__title .title {
-            color: #1e3a8a;
-            font-weight: 700;
+        .game__title {
+            .title {
+                font-size: 2rem;
+                font-weight: 700;
+                
+            }
+
+            img {
+                display: block;
+                height: 40px;
+                width: 40px;
+            }
+            
         }
 
         .scrore__container {
-            background: white;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            width: 200px;
+            height: 56px;
             border-radius: 10px;
 
-         
             span {
-                color: #28576b;
                 font-size: 2rem;
                 font-weight: 700;
                 padding-right: 1.5rem;
@@ -324,6 +338,8 @@
                 height: 28px;
                 width: 22px;
             }
+
+            
         }
     }
 
@@ -424,6 +440,7 @@
                 font-size: 2rem;
                 font-weight: 700;
                 padding-right: 1.5rem;
+                font-family: 'Delius Unicase';
             }
 
             p {

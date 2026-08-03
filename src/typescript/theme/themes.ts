@@ -75,7 +75,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     card: {
       width: 120,
       height: 100,
-      coverImage: "src/assets/images/white/prew-hover-img.svg",
+      coverImage: "src/assets/images/da-projects/front.svg",
     },
     header: {
       blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
@@ -107,7 +107,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     card: {
       width: 120,
       height: 120,
-      coverImage: "src/assets/images/foods/prew-hover-img.svg",
+      coverImage: "src/assets/images/foods/front.svg",
     },
     header: {
       blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
