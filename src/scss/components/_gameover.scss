@@ -78,8 +78,17 @@
                     background: #ffffff;
                     border-radius: 10px;
                 }
+
+
+            
             }
+       
+
         }
+
+         #back-to-menu{
+                width: 130px;
+            }
     }
 
     &.game-theme--da-projects {
@@ -98,6 +107,10 @@
                 }
             }
         }
+
+               #back-to-menu{
+                width: 130px;
+            }
     }
 
     &.game-theme--foods {
@@ -116,5 +129,9 @@
                 }
             }
         }
+
+               #back-to-menu{
+                width: 130px;
+            }
     }
 }

@@ -98,20 +98,22 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1000;
+    font-family: 'Red Rose', serif;
+
+
 
     &__content {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 540px;
+        width: 524px;
         height: 270px;
-        padding: 3rem 2rem;
         background-color: $color;
         box-sizing: border-box;
 
         p {
-            font-size: 2rem;
+            font-size: 32px;
             font-weight: 700;
             text-align: center;
             padding-bottom: 2rem;
@@ -157,6 +159,7 @@
     font-family: 'Red Rose', sans-serif;
 }
 
+
 // ── Theme 2: Gaming ──
 .game-theme--gaming {
     background: #294f60;
@@ -184,6 +187,7 @@
                 height: 40px;
                 width: 40px;
             }
+            
         }
 
         .scrore__container {
@@ -210,8 +214,9 @@
                 width: 22px;
             }
         }
-    }
 
+    }
+    
     .exit-btn {
         background: transparent;
         border-radius: 10px;
@@ -227,7 +232,7 @@
                     contrast(94%);
         }
         }
-        
+
         span {
             color: #ffffff;
         }
@@ -236,6 +241,23 @@
             height: 30px;
             width: 30px;
         }
+
+    }
+}
+
+.overlay--gaming {
+    .overlay__content {
+        background: #535d75;
+        border-radius: 12px;
+    }
+
+    .stay-btn {
+        background: #e52885;
+    }
+
+    .back-btn {
+        border: 2px solid #e52885;
+        color: #e52885;
     }
 }
 
