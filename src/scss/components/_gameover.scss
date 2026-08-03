@@ -42,7 +42,7 @@
                     color: #2bb1ff;
                 }
 
-                .score__b {
+                .score__b{
                     font-size: 24px;
                     font-weight: 700;
                     color: #2bb1ff;
@@ -65,7 +65,7 @@
 
     // ── Theme Overrides for Game Over ──
     &.game-theme--gaming {
-        background: #1c3044;
+        // background: #294f60;
 
         .game-over {
             .main__container {
@@ -114,7 +114,6 @@
     }
 
     &.game-theme--foods {
-        background: #ea580c;
 
         .game-over {
             .main__container {

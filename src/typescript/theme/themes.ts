@@ -33,6 +33,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
     },
   },
+
   gaming: {
     id: "gaming",
     key: "gaming",
@@ -77,8 +78,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       coverImage: "src/assets/images/white/prew-hover-img.svg",
     },
     header: {
-      blueLabelIcon: "src/assets/images/dark/label-blue.svg",
-      orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
+      blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
+      orangeLabelIcon: "src/assets/images/gaming/chess_pawn-orange.svg",
       exitIcon: "src/assets/images/dark/exit-icon.svg",
     },
     winner: {
@@ -109,8 +110,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       coverImage: "src/assets/images/foods/prew-hover-img.svg",
     },
     header: {
-      blueLabelIcon: "src/assets/images/dark/label-blue.svg",
-      orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
+      blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
+      orangeLabelIcon: "src/assets/images/gaming/chess_pawn-orange.svg",
       exitIcon: "src/assets/images/dark/exit-icon.svg",
     },
     winner: {

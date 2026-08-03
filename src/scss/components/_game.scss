@@ -33,6 +33,7 @@
             gap: 0.75rem;
             padding: 1rem;
             background: $button_dark_background;
+            
 
             p {
                 font-size: 24px;
@@ -199,7 +200,7 @@
             border-radius: 10px;
 
             span {
-                color: #28576b;
+                color: #097fc5;
                 font-size: 2rem;
                 font-weight: 700;
                 padding-right: 1.5rem;
@@ -213,6 +214,8 @@
                 height: 28px;
                 width: 22px;
             }
+
+            
         }
 
     }
@@ -305,8 +308,21 @@
             background: white;
             border-radius: 10px;
 
-            p, span {
-                color: #1e3a8a;
+         
+            span {
+                color: #28576b;
+                font-size: 2rem;
+                font-weight: 700;
+                padding-right: 1.5rem;
+            }
+
+            p {
+                display: none;
+            }
+
+            img{
+                height: 28px;
+                width: 22px;
             }
         }
     }
@@ -365,30 +381,58 @@
 // ── Theme 4: Foods ──
 .game-theme--foods {
     background: #fff8f0;
-    font-family: 'Red Rose', sans-serif;
+    font-family: 'Klee One', sans-serif;
 
     .game__header-one {
         display: flex;
         justify-content: space-between;
         width: 90%;
         height: 80px;
-        background: #ffffff;
+        background: #f0e5d9;
         border: 1px solid #fed7aa;
         border-radius: 10px;
         padding: 1rem;
-        color: #7c2d12;
+        color: #ea580c;
 
-        .game__title .title {
-            color: #ea580c;
-            font-weight: 700;
+    
+        .game__title {
+            .title {
+                font-size: 2rem;
+                font-weight: 700;
+
+            }
+
+            img {
+                display: block;
+                height: 40px;
+                width: 40px;
+            }
+            
         }
 
-        .scrore__container {
-            background: #ffedd5;
+       .scrore__container {
+            background: white;
             border-radius: 10px;
+            height: 54px;
+            width: 180px;
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
 
-            p, span {
-                color: #ea580c;
+            span {
+                color: #28576b;
+                font-size: 2rem;
+                font-weight: 700;
+                padding-right: 1.5rem;
+            }
+
+            p {
+                display: none;
+            }
+
+            img{
+                height: 28px;
+                width: 22px;
             }
         }
     }
