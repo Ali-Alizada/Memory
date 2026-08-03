@@ -246,19 +246,38 @@
 }
 
 .overlay--gaming {
+    font-family: 'Orbitron';
+    
+
     .overlay__content {
-        background: #535d75;
-        border-radius: 12px;
+        background: white;
+        border-radius: 16px;
+
+        p{
+            font-size: 28px;
+            font-weight: 700;
+            color:#294f60;
+        }
     }
 
-    .stay-btn {
-        background: #e52885;
+    .overlayBtns{
+
+        button{
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+        }
+
+        .stay-btn {
+        background: #e52885; 
     }
 
     .back-btn {
         border: 2px solid #e52885;
         color: #e52885;
     }
+    }
+
 }
 
 // ── Theme 3: DA Projects ──
@@ -307,6 +326,42 @@
     }
 }
 
+.overlay--da-projects {
+     font-family: 'Figtree';
+    
+    .overlay__content {
+        background: #F0F6F9;
+        border-radius: 16px;
+
+        p{
+            font-size: 28px;
+            font-weight: 700;
+            color:#294f60;
+        }
+    }
+
+    .overlayBtns{
+        
+        button{
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+        }
+
+        .stay-btn {
+        background: #bfe5f2; 
+        color:#294f60;
+    }
+
+    .back-btn {
+        border: none;
+        color: white;
+        background: #FD8A81;
+    }
+    }
+
+}
+
 // ── Theme 4: Foods ──
 .game-theme--foods {
     background: #fff8f0;
@@ -351,4 +406,42 @@
             background: #fff7ed;
         }
     }
+}
+
+.overlay--foods {
+     font-family: 'Klee One', sans-serif;
+    
+    .overlay__content {
+        background: #f6f6f6;
+        border-radius: 16px;
+        
+        p{
+            font-size: 28px;
+            font-weight: 600;
+            color:#294f60;
+        }
+    }
+
+    .overlayBtns{
+        
+        button{
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+        }
+
+        .stay-btn {
+        background: #ffab3e; 
+        border: 1px solid #ea580c;
+        color:white;
+    }
+
+    .back-btn {
+        border: none;
+        color: #ea580c;
+        background: none;
+        border: 1px solid #ea580c;
+    }
+    }
+
 }

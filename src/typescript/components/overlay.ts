@@ -15,7 +15,7 @@ export function createExitOverlay(
         stayButtonText = "Back to game";
     }
 
-    if (gameSettings.theme === "code-vibes" || gameSettings.theme === "da-projects") {
+    if (gameSettings.theme === "code-vibes" || gameSettings.theme === "da-projects" || gameSettings.theme === "foods") {
         exitButtonText = "Exit game";
     }
 

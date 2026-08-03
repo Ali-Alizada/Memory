@@ -26,29 +26,65 @@
 
 /* figtree-regular - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; 
   font-family: 'Figtree';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/figtree-v9-latin-regular.woff2') format('woff2');
+  src: url('../fonts/figtree-v9-latin-regular.woff2') format('woff2'); 
+}
+
+/* figtree-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/figtree-v9-latin-700.woff2') format('woff2'); 
+}
+
+/* figtree-800 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/figtree-v9-latin-800.woff2') format('woff2'); 
 }
 
 /* klee-one-regular - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; 
   font-family: 'Klee One';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/klee-one-v13-latin-regular.woff2') format('woff2');
+  src: url('../fonts/klee-one-v13-latin-regular.woff2') format('woff2'); 
+}
+
+/* klee-one-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Klee One';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/klee-one-v13-latin-600.woff2') format('woff2'); 
 }
 
 /* orbitron-regular - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; 
   font-family: 'Orbitron';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/orbitron-v35-latin-regular.woff2') format('woff2');
+  src: url('../fonts/orbitron-v35-latin-regular.woff2') format('woff2');
+}
+
+/* orbitron-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/orbitron-v35-latin-700.woff2') format('woff2');
 }
 
 *,
