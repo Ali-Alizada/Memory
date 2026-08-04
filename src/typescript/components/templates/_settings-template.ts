@@ -128,7 +128,5 @@ export function settingsTemplate(): string {
         </section>
 
     </div>
-
-
     `;
 }

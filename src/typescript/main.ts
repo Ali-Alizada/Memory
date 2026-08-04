@@ -15,9 +15,6 @@ import "../scss/components/_winner.scss";
 //@ts-ignore
 import "../scss/components/_overlay.scss";
 
-
-
-
 import { renderHome } from "./components/_home";
 
 const app = document.getElementById("app")!;
