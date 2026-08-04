@@ -87,7 +87,7 @@ export const themes: Record<ThemeId, ThemeConfig> = {
       showConfetti: false,
       confettiSrc: "",
       blueWinnerIcon: "src/assets/images/da-projects/blue-Player-icon.svg",
-      orangeWinnerIcon: "src/assets/images/da-projects/orange-winner-icon.svg",
+      orangeWinnerIcon: "src/assets/images/da-projects/orange-Player-icon.svg",
     },
     draw: {
       drawTextImg: "src/assets/images/da-projects/DRAW.svg",
@@ -95,8 +95,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     },
     gameOver: {
       heroImg: "src/assets/images/da-projects/GAME OVER.svg",
-      blueLabelIcon: "src/assets/images/dark/label-blue.svg",
-      orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
+      blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
+      orangeLabelIcon: "src/assets/images/gaming/chess_pawn-orange.svg",
     },
   },
 

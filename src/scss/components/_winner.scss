@@ -192,16 +192,23 @@
 // DA Projects Theme
 .game-theme--da-projects {
     &.winner, &.draw {
-        background: white;
+        background: #1e7594;
         font-family: 'Figtree', sans-serif;
 
         .main__container {
             h2, h3 {
-                color: #ffffff;
+                 color: white;
+                 padding-bottom: 24px;
+            }
+
+            .winner-content img{
+            width: auto;
+            height: auto;
             }
 
             .blue-winner {
-                color: #60a5fa;
+                 color: white;
+                font-size: 5rem;
             }
 
             .orange-winner {
@@ -209,9 +216,9 @@
             }
 
             .back-btn {
-                background: #ffffff;
+                background: white;
                 border: 2px solid #2563eb;
-                color: #2563eb;
+                color: #38bdf8;
                 border-radius: 10px;
 
                 &:hover {

@@ -92,18 +92,37 @@
     }
 
     &.game-theme--da-projects {
-        // background: white;
+            background: #1e7594;
+            font-family: 'Figtree', sans-serif;
 
         .game-over {
             .main__container {
                 h2 {
                     color: #ffffff;
                     font-family: 'Figtree', sans-serif;
+                    font-size: 2.5rem;
                 }
 
                 .scrore__container {
-                    background: #ffffff;
-                    border-radius: 10px;
+                    background: white;
+                    width: 180px;
+                    height: 66px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    padding-right: 10px;
+                    border-radius: 8px;
+                    
+
+                    p{
+                        display: none;
+                    }
+
+                    span{
+                        font-size: 2.25rem;
+                        padding-right: 14px;
+                    }
                 }
             }
         }

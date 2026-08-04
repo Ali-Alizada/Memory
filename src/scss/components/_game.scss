@@ -319,7 +319,7 @@
         .scrore__container {
             display: flex;
             align-items: center;
-            background: #ffffff;
+            background: white;
             width: 200px;
             height: 56px;
             border-radius: 10px;
@@ -345,15 +345,32 @@
 
     .exit-btn {
         background: #bfe5f2;
-        border: none;
-        border-radius: 10px;
+        border-radius: 8px;
+        box-shadow: none;
+        
 
         span {
-            color: #2563eb;
+            color: #097fc5;
+            
+        }
+
+        img {
+            filter: brightness(0) saturate(100%) invert(38%) sepia(97%)
+                    saturate(1719%) hue-rotate(177deg) brightness(92%)
+                    contrast(94%);
         }
 
         &:hover {
-            background: #eff6ff;
+            background: #1e7594;
+            border: none;
+
+            span {
+                color: white;
+            }
+
+            img {
+                filter: brightness(0) invert(1);
+            }
         }
     }
 }
