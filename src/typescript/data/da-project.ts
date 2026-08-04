@@ -25,7 +25,6 @@ export const daProjectsCardsWinner = {
   showConfetti: false,
   confettiSrc: "",
   blueWinnerIcon: "...",
-
 };
 
 export const daProjectsCards: Card[] = assets.flatMap((item, index) => {

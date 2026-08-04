@@ -33,7 +33,7 @@
             gap: 0.75rem;
             padding: 1rem;
             background: $button_dark_background;
-            
+
 
             p {
                 font-size: 24px;
@@ -91,75 +91,11 @@
     justify-content: center;
 }
 
-.overlay {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-    font-family: 'Red Rose', serif;
-
-
-
-    &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 524px;
-        height: 270px;
-        background-color: $color;
-        box-sizing: border-box;
-
-        p {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            padding-bottom: 2rem;
-            color: $background;
-        }
-    }
-
-    .overlayBtns {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-
-        button {
-            font-size: 20px;
-            font-weight: 700;
-            gap: 10px;
-            padding: 0.7rem 1rem;
-            cursor: pointer;
-            border: none;
-        }
-
-        .stay-btn {
-            background: $cards_primary;
-            color: $color;
-        }
-
-        .back-btn {
-            background: $color;
-            color: $cards_primary;
-            border: 1px solid $cards_primary;
-        }
-    }
-}
-
-.hidden {
-    display: none;
-}
-
 // ── Theme 1: Code Vibes ──
 .game-theme--code-vibes {
     background: $background;
     font-family: 'Red Rose', sans-serif;
 }
-
 
 // ── Theme 2: Gaming ──
 .game-theme--gaming {
@@ -188,7 +124,7 @@
                 height: 40px;
                 width: 40px;
             }
-            
+
         }
 
         .scrore__container {
@@ -204,23 +140,21 @@
                 font-size: 2rem;
                 font-weight: 700;
                 padding-right: 1.5rem;
-                
+
             }
 
             p {
                 display: none;
             }
 
-            img{
+            img {
                 height: 28px;
                 width: 22px;
             }
-
-            
         }
 
     }
-    
+
     .exit-btn {
         background: transparent;
         border-radius: 10px;
@@ -228,20 +162,18 @@
 
         &:hover {
             border-color: #b91e67;
-            box-shadow: 0 0 5px #b91e67;    
-        
-           img {
-            filter: brightness(0) saturate(100%) invert(21%) sepia(93%)
-                    saturate(2628%) hue-rotate(319deg) brightness(92%)
-                    contrast(94%);
-        }
+            box-shadow: 0 0 5px #b91e67;
+
+            img {
+                filter: brightness(0) saturate(100%) invert(21%) sepia(93%) saturate(2628%) hue-rotate(319deg) brightness(92%) contrast(94%);
+            }
         }
 
         span {
             color: #ffffff;
         }
 
-        img{
+        img {
             height: 30px;
             width: 30px;
         }
@@ -249,47 +181,12 @@
     }
 }
 
-.overlay--gaming {
-    font-family: 'Orbitron';
-    
-
-    .overlay__content {
-        background: white;
-        border-radius: 16px;
-
-        p{
-            font-size: 28px;
-            font-weight: 700;
-            color:#294f60;
-        }
-    }
-
-    .overlayBtns{
-
-        button{
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 12px;
-        }
-
-        .stay-btn {
-        background: #e52885; 
-    }
-
-    .back-btn {
-        border: 2px solid #e52885;
-        color: #e52885;
-    }
-    }
-
-}
-
 // ── Theme 3: DA Projects ──
 .game-theme--da-projects {
     background: white;
     font-family: 'Figtree', sans-serif;
 
-   .game__header-one {
+    .game__header-one {
         display: flex;
         justify-content: space-between;
         width: 90%;
@@ -299,13 +196,13 @@
         border-radius: 10px;
         padding: 1rem;
         color: #097fc5;
-       
+
 
         .game__title {
             .title {
                 font-size: 2rem;
                 font-weight: 700;
-                
+
             }
 
             img {
@@ -313,7 +210,7 @@
                 height: 40px;
                 width: 40px;
             }
-            
+
         }
 
         .scrore__container {
@@ -334,12 +231,12 @@
                 display: none;
             }
 
-            img{
+            img {
                 height: 28px;
                 width: 22px;
             }
 
-            
+
         }
     }
 
@@ -347,17 +244,15 @@
         background: #bfe5f2;
         border-radius: 8px;
         box-shadow: none;
-        
+
 
         span {
             color: #097fc5;
-            
+
         }
 
         img {
-            filter: brightness(0) saturate(100%) invert(38%) sepia(97%)
-                    saturate(1719%) hue-rotate(177deg) brightness(92%)
-                    contrast(94%);
+            filter: brightness(0) saturate(100%) invert(38%) sepia(97%) saturate(1719%) hue-rotate(177deg) brightness(92%) contrast(94%);
         }
 
         &:hover {
@@ -373,42 +268,6 @@
             }
         }
     }
-}
-
-.overlay--da-projects {
-     font-family: 'Figtree';
-    
-    .overlay__content {
-        background: #F0F6F9;
-        border-radius: 16px;
-
-        p{
-            font-size: 28px;
-            font-weight: 700;
-            color:#294f60;
-        }
-    }
-
-    .overlayBtns{
-        
-        button{
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 12px;
-        }
-
-        .stay-btn {
-        background: #bfe5f2; 
-        color:#294f60;
-    }
-
-    .back-btn {
-        border: none;
-        color: white;
-        background: #FD8A81;
-    }
-    }
-
 }
 
 // ── Theme 4: Foods ──
@@ -427,7 +286,7 @@
         padding: 1rem;
         color: #ea580c;
 
-    
+
         .game__title {
             .title {
                 font-size: 2rem;
@@ -440,10 +299,10 @@
                 height: 40px;
                 width: 40px;
             }
-            
+
         }
 
-       .scrore__container {
+        .scrore__container {
             background: white;
             border-radius: 10px;
             height: 54px;
@@ -464,30 +323,26 @@
                 display: none;
             }
 
-            img{
+            img {
                 height: 28px;
                 width: 22px;
             }
         }
     }
 
-
     .exit-btn {
         background: #ffffff;
         border: 1px solid #ea580c;
         border-radius: 10px;
         box-shadow: none;
-        
 
         span {
             color: #ea580c;
-            
+
         }
 
         img {
-            filter: brightness(0) saturate(100%) invert(47%) sepia(94%)
-                    saturate(2872%) hue-rotate(9deg) brightness(96%)
-            contrast(95%);
+            filter: brightness(0) saturate(100%) invert(47%) sepia(94%) saturate(2872%) hue-rotate(9deg) brightness(96%) contrast(95%);
         }
 
         &:hover {
@@ -503,44 +358,4 @@
             }
         }
     }
-}
-
-.overlay--foods {
-     font-family: 'Klee One', sans-serif;
-    
-    .overlay__content {
-        background: #f6f6f6;
-        border-radius: 16px;
-        
-        p{
-            font-size: 28px;
-            font-weight: 600;
-            color:#294f60;
-        }
-    }
-
-    .overlayBtns{
-        
-        
-        button{
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 12px;
-            font-family: 'Delius Unicase', sans-serif;
-        }
-
-        .stay-btn {
-        background: #ffab3e; 
-        border: 1px solid #ea580c;
-        color:white;
-    }
-
-    .back-btn {
-        border: none;
-        color: #ea580c;
-        background: none;
-        border: 1px solid #ea580c;
-    }
-    }
-
 }

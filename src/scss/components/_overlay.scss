@@ -1,0 +1,171 @@
+@use "../abstract/variablen" as *;
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    font-family: 'Red Rose', serif;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 524px;
+        height: 270px;
+        background-color: $color;
+        box-sizing: border-box;
+
+        p {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 2rem;
+            color: $background;
+        }
+    }
+
+    .overlayBtns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+            font-size: 20px;
+            font-weight: 700;
+            gap: 10px;
+            padding: 0.7rem 1rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .stay-btn {
+            background: $cards_primary;
+            color: $color;
+        }
+
+        .back-btn {
+            background: $color;
+            color: $cards_primary;
+            border: 1px solid $cards_primary;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay--gaming {
+    font-family: 'Orbitron';
+
+    .overlay__content {
+        background: white;
+        border-radius: 16px;
+
+        p {
+            font-size: 28px;
+            font-weight: 700;
+            color: #294f60;
+        }
+    }
+
+    .overlayBtns {
+
+        button {
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+        }
+
+        .stay-btn {
+            background: #e52885;
+        }
+
+        .back-btn {
+            border: 2px solid #e52885;
+            color: #e52885;
+        }
+    }
+
+}
+
+.overlay--da-projects {
+    font-family: 'Figtree';
+
+    .overlay__content {
+        background: #F0F6F9;
+        border-radius: 16px;
+
+        p {
+            font-size: 28px;
+            font-weight: 700;
+            color: #294f60;
+        }
+    }
+
+    .overlayBtns {
+
+        button {
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+        }
+
+        .stay-btn {
+            background: #bfe5f2;
+            color: #294f60;
+        }
+
+        .back-btn {
+            border: none;
+            color: white;
+            background: #FD8A81;
+        }
+    }
+
+}
+
+
+.overlay--foods {
+    font-family: 'Klee One', sans-serif;
+
+    .overlay__content {
+        background: #f6f6f6;
+        border-radius: 16px;
+
+        p {
+            font-size: 28px;
+            font-weight: 600;
+            color: #294f60;
+        }
+    }
+
+    .overlayBtns {
+        button {
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            font-family: 'Delius Unicase', sans-serif;
+        }
+
+        .stay-btn {
+            background: #ffab3e;
+            border: 1px solid #ea580c;
+            color: white;
+        }
+
+        .back-btn {
+            border: none;
+            color: #ea580c;
+            background: none;
+            border: 1px solid #ea580c;
+        }
+    }
+
+}

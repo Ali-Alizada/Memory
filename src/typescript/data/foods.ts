@@ -21,12 +21,10 @@ const foodAssets = [
   { asset: "src/assets/images/foods/9b.svg", label: "Cheese", alt: "Cheese" },
 ];
 
-
 export const foodCardsWinner = {
   showConfetti: false,
   confettiSrc: "",
   blueWinnerIcon: "...",
-
 };
 
 export const foodCards: Card[] = foodAssets.flatMap((item, index) => {

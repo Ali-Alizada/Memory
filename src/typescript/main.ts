@@ -12,6 +12,8 @@ import "../scss/components/_cards.scss";
 import "../scss/components/_gameover.scss";
 //@ts-ignore
 import "../scss/components/_winner.scss";
+//@ts-ignore
+import "../scss/components/_overlay.scss";
 
 
 
