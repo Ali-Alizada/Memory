@@ -77,7 +77,7 @@ export function renderGame(app: HTMLElement) {
             if (isProcessing) return;
             if (cardEl.classList.contains("flipped") || cardEl.classList.contains("matched")) return;
 
-            // Flip current card
+
             cardEl.classList.add("flipped");
             flippedCards.push(cardEl);
 
@@ -88,7 +88,7 @@ export function renderGame(app: HTMLElement) {
                 const pairId2 = card2.dataset.pairId;
 
                 if (pairId1 === pairId2) {
-                    // Match found!
+
                     card1.classList.add("matched");
                     card2.classList.add("matched");
                     
@@ -98,7 +98,6 @@ export function renderGame(app: HTMLElement) {
                     flippedCards = [];
                     isProcessing = false;
 
-                    // Check win condition
                     const allMatched = Array.from(cardElements).every((c) => c.classList.contains("matched"));
                     if (allMatched) {
                         setTimeout(() => {
