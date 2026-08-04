@@ -1,4 +1,5 @@
 import { gameSettings } from "./settings/_settingState";
+import { overlayTemplate } from "./templates/_overlay-template";
 
 export function createExitOverlay(
     app: HTMLElement, 
@@ -19,19 +20,10 @@ export function createExitOverlay(
         exitButtonText = "Exit game";
     }
 
-    overlay.innerHTML = `
-    
-         <div class="overlay__content">
-                    <p>Are you sure you want to quite <br>the game?</p>
-                    
-                    <div class="overlayBtns">
-                          <button class="stay-btn">${stayButtonText}</button>
-                          <button class="back-btn">${exitButtonText}</button>
-                    </div>
-                  
-        </div>
-    
-    `;
+    overlay.innerHTML = overlayTemplate(
+    stayButtonText,
+    exitButtonText
+);
 
     app.appendChild(overlay);
 
@@ -50,6 +42,4 @@ export function createExitOverlay(
     });
 
     return overlay;
-
-
 }
