@@ -42,7 +42,7 @@
                     color: #2bb1ff;
                 }
 
-                .score__b{
+                .score__b {
                     font-size: 24px;
                     font-weight: 700;
                     color: #2bb1ff;
@@ -78,22 +78,17 @@
                     background: #ffffff;
                     border-radius: 10px;
                 }
-
-
-            
             }
-       
-
         }
 
-         #back-to-menu{
-                width: 130px;
-            }
+        #back-to-menu {
+            width: 130px;
+        }
     }
 
     &.game-theme--da-projects {
-            background: #1e7594;
-            font-family: 'Figtree', sans-serif;
+        background: #1e7594;
+        font-family: 'Figtree', sans-serif;
 
         .game-over {
             .main__container {
@@ -113,13 +108,12 @@
                     gap: 10px;
                     padding-right: 10px;
                     border-radius: 8px;
-                    
 
-                    p{
+                    p {
                         display: none;
                     }
 
-                    span{
+                    span {
                         font-size: 2.25rem;
                         padding-right: 14px;
                     }
@@ -127,29 +121,48 @@
             }
         }
 
-               #back-to-menu{
-                width: 130px;
-            }
+        #back-to-menu {
+            width: 130px;
+        }
     }
 
     &.game-theme--foods {
+        background: #fb923c;
+        font-family: 'Klee One', sans-serif;
 
         .game-over {
+
             .main__container {
                 h2 {
+
                     color: #ffffff;
-                    font-family: 'Red Rose', sans-serif;
+                    font-weight: 600;
+                    font-size: 42px;
                 }
 
                 .scrore__container {
                     background: #fff5eb;
-                    border-radius: 10px;
+                    height: 66px;
+                    gap: 10px;
+                    padding-right: 10px;
+                    margin-top: 0;
+
+                    p {
+                        display: none;
+                    }
+
+                    span {
+                        font-size: 2.25rem;
+                        padding-right: 14px;
+                    }
                 }
+
+
             }
         }
 
-               #back-to-menu{
-                width: 130px;
-            }
+        #back-to-menu {
+            width: 130px;
+        }
     }
 }

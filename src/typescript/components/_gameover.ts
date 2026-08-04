@@ -1,5 +1,5 @@
-import { renderWinner } from "./_winner";
-import { renderDraw } from "./_draw";
+// import { renderWinner } from "./_winner";
+// import { renderDraw } from "./_draw";
 import { gameSettings } from "./settings/_settingState";
 import { getThemeConfig } from "../theme/index";
 

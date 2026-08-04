@@ -100,9 +100,11 @@
     0% {
         transform: translate(-50%, -115%) rotate(-2deg);
     }
+
     72% {
         transform: translate(-50%, 4%) rotate(1deg);
     }
+
     100% {
         transform: translate(-50%, 0) rotate(0);
     }
@@ -145,12 +147,14 @@
 
 // Gaming Theme
 .game-theme--gaming {
-    &.winner, &.draw {
+
+    &.winner,
+    &.draw {
         background: #294f60;
         font-family: 'Orbitron', sans-serif;
 
         .main__container {
-            h2{
+            h2 {
                 padding-bottom: 26px;
                 color: white;
             }
@@ -175,39 +179,40 @@
                 }
             }
 
-                 .winner-content {
-                        img {
-                            width: 340px;
-                            height: 272px;
-                            // margin: 26px;
-                        }
-                    }
-                
-            
-
+            .winner-content {
+                img {
+                    width: 340px;
+                    height: 272px;
+                    // margin: 26px;
+                }
+            }
         }
     }
 }
 
 // DA Projects Theme
 .game-theme--da-projects {
-    &.winner, &.draw {
+
+    &.winner,
+    &.draw {
         background: #1e7594;
         font-family: 'Figtree', sans-serif;
 
         .main__container {
-            h2, h3 {
-                 color: white;
-                 padding-bottom: 24px;
+
+            h2,
+            h3 {
+                color: white;
+                padding-bottom: 24px;
             }
 
-            .winner-content img{
-            width: auto;
-            height: auto;
+            .winner-content img {
+                width: auto;
+                height: auto;
             }
 
             .blue-winner {
-                 color: white;
+                color: white;
                 font-size: 5rem;
             }
 
@@ -231,31 +236,48 @@
 
 // Food Theme
 .game-theme--foods {
-    &.winner, &.draw {
-    background: #fff8f0;
-    font-family: 'Klee One', sans-serif;
+
+    &.winner,
+    &.draw {
+        background: #fff8f0;
+        font-family: 'Klee One', sans-serif;
 
         .main__container {
-            h2, h3 {
-                color: #ffffff;
+            h2 {
+                color: #a45212;
+                padding-bottom: 18px;
+            }
+
+            .winner-content img {
+                width: auto;
+                height: auto;
             }
 
             .blue-winner {
-                color: #7dd3fc;
+                color: #a45212;
             }
 
             .orange-winner {
-                color: #ffedd5;
+                font-size: 5rem;
+                color: #a45212;
+                font-weight: 700;
             }
 
             .back-btn {
-                background: #ffffff;
-                border: 2px solid #ea580c;
-                color: #ea580c;
+                font-family: 'Delius Unicase', sans-serif;
+                background: #fb923c;
+                color: white;
+                font-weight: 700;
+                font-size: 1rem;
                 border-radius: 10px;
+                border: none;
+
 
                 &:hover {
-                    background: #fff7ed;
+                    background: white;
+                    color: #fb923c;
+                    box-shadow: unset;
+                    border: 2px solid #fb923c;
                 }
             }
         }
