@@ -123,6 +123,11 @@
     background: $background;
 }
 
+.winner.container__wrapper.game-theme--da-projects,
+.draw.container__wrapper.game-theme--da-projects {
+    background: #1e7594;
+}
+
 .draw {
     display: flex;
     align-items: center;
@@ -168,6 +173,7 @@
             }
 
             .back-btn {
+                width: 120px;
                 background: transparent;
                 border: 2px solid #e52885;
                 color: #ffffff;
@@ -221,13 +227,15 @@
             }
 
             .back-btn {
+                width: 120px;
                 background: white;
-                border: 2px solid #2563eb;
-                color: #38bdf8;
+                color: #1e7594;
                 border-radius: 10px;
+                border: none;
 
                 &:hover {
                     background: #eff6ff;
+                    box-shadow: unset;
                 }
             }
         }
@@ -264,6 +272,7 @@
             }
 
             .back-btn {
+                width: 120px;
                 font-family: 'Delius Unicase', sans-serif;
                 background: #fb923c;
                 color: white;

@@ -128,8 +128,8 @@ export const themes: Record<ThemeId, ThemeConfig> = {
     },
     gameOver: {
       heroImg: "src/assets/images/foods/Game over.svg",
-      blueLabelIcon: "src/assets/images/dark/label-blue.svg",
-      orangeLabelIcon: "src/assets/images/dark/label-orange.svg",
+      blueLabelIcon: "src/assets/images/gaming/chess_pawn-blue.svg",
+      orangeLabelIcon: "src/assets/images/gaming/chess_pawn-orange.svg",
     },
   },
 };

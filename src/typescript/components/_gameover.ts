@@ -1,5 +1,5 @@
-// import { renderWinner } from "./_winner";
-// import { renderDraw } from "./_draw";
+import { renderWinner } from "./_winner";
+import { renderDraw } from "./_draw";
 import { gameSettings } from "./settings/_settingState";
 import { getThemeConfig } from "../theme/index";
 
@@ -7,7 +7,7 @@ export function renderGameOver(app: HTMLElement, scores: { bluePlayer: number; o
     const themeConfig = getThemeConfig(gameSettings.theme);
 
     app.innerHTML = `
-    <div class="container__wrapper ${themeConfig.cssClass}">
+    <div class="container__wrapper game-over-page ${themeConfig.cssClass}">
         <section class="screen game-over">
             <header class="game-over-header">
                 <img class="game-over__hero-img" src="${themeConfig.gameOver.heroImg}" alt="hero-text-img">
