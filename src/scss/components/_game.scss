@@ -471,17 +471,36 @@
         }
     }
 
+
     .exit-btn {
         background: #ffffff;
-        border: 2px solid #ea580c;
+        border: 1px solid #ea580c;
         border-radius: 10px;
+        box-shadow: none;
+        
 
         span {
             color: #ea580c;
+            
+        }
+
+        img {
+            filter: brightness(0) saturate(100%) invert(47%) sepia(94%)
+                    saturate(2872%) hue-rotate(9deg) brightness(96%)
+            contrast(95%);
         }
 
         &:hover {
-            background: #fff7ed;
+            background: #ea580c;
+            border: none;
+
+            span {
+                color: white;
+            }
+
+            img {
+                filter: brightness(0) invert(1);
+            }
         }
     }
 }
