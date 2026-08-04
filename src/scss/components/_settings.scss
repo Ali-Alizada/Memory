@@ -1,28 +1,24 @@
 @use "../abstract/variablen" as *;
+@use "../abstract/mixin" as mixins;
 
 .container-wrapper {
     width: min(1440px, 100%);
     min-height: 100vh;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex-between;
     padding: 0 6rem;
     font-family: 'Almarai';
 }
 
 .setting {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @include mixins.flex(center, null, column);
     align-content: center;
 
     &__header {
         padding-bottom: 5rem;
 
         h2 {
-            font-size: 3.5rem;
-            font-weight: 700;
+            @include mixins.text(3.5rem, $font-weight-bold);
             font-family: 'Red Rose';
         }
 
@@ -36,10 +32,9 @@
         .game__themes__title,
         .game__title__players,
         .game__title__board {
-            display: flex;
+            @include mixins.flex($gap: 10px);
             align-content: center;
             text-align: center;
-            gap: 10px;
 
             img {
                 width: 20px;
@@ -47,31 +42,25 @@
             }
 
             p {
-                font-size: 1.5rem;
-                font-weight: 700;
+                @include mixins.text(1.5rem, $font-weight-bold);
             }
         }
 
         .radio__buttons {
-            display: flex;
-            flex-direction: column;
+            @include mixins.flex($direction: column, $gap: 8px);
             padding: 1rem 2rem 5rem 2rem;
-            gap: 8px;
 
             >div {
-                display: flex;
-                align-items: center;
-                gap: 8px;
+                @include mixins.flex($align: center, $gap: 8px);
             }
 
             label {
-                font-size: 1.25rem;
-                font-weight: 400;
+                @include mixins.text(1.25rem, $font-weight-regular);
                 cursor: pointer;
                 padding-left: 8px;
 
                 &:hover {
-                    font-weight: 700;
+                    font-weight: $font-weight-bold;
                 }
             }
 
@@ -101,21 +90,18 @@
 .container-right {
     min-width: 600px;
     padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
+    @include mixins.flex($direction: column);
 }
 
 .prew-imgs-container {
-    display: flex;
+    @include mixins.flex;
     width: 460px;
     height: auto;
 }
 
 .start__pannel {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex-between;
     margin-top: 3rem;
     padding: 1rem;
     background: #f0f0f0;
@@ -126,16 +112,12 @@
     }
 
     .game__button {
-        height: 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: $control-height;
+        @include mixins.flex-center($gap: 14px);
         border: none;
         background: transparent;
-        gap: 14px;
         padding-right: 16px;
-        font-size: 1.25rem;
-        font-weight: 400;
+        @include mixins.text(1.25rem, $font-weight-regular);
 
         &:disabled {
             cursor: not-allowed;
@@ -145,18 +127,14 @@
 
 .start-btn {
     width: 130px;
-    height: 55px;
-    font-size: 1.25rem;
-    font-weight: 700;
+    height: $control-height;
+    @include mixins.text(1.25rem, $font-weight-bold);
     background: $button_color;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flex-center($gap: 14px);
     font-family: 'Red Rose';
-    gap: 14px;
     transition:
         transform 300ms ease,
         box-shadow 300ms ease;

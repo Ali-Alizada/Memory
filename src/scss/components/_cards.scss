@@ -96,7 +96,7 @@
         background: radial-gradient(circle at center, color.adjust($button_dark_background, $lightness: 3%) 0%, color.adjust($button_dark_background, $lightness: -2%) 100%);
     }
 
-    // ── Theme 1: Code Vibes ──
+    // ── Theme 1: Code Vibes.
     &--code-vibes {
         width: 120px;
         height: 120px;
@@ -105,7 +105,7 @@
         aspect-ratio: 1 / 1;
     }
 
-    // ── Theme 2: Gaming (105 × 120 px) ──
+    // ── Theme 2: Gaming.
     &--gaming {
         width: 105px;
         height: 120px;
@@ -144,10 +144,9 @@
                 object-fit: contain;
             }
         }
-
     }
 
-    // ── Theme 3: DA Projects ──
+    // ── Theme 3: DA Projects.
     &--da-projects {
         width: 120px;
         height: 100px;

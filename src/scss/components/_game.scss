@@ -1,12 +1,11 @@
 @use "../abstract/variablen" as *;
+@use "../abstract/mixin" as mixins;
 
 .container__wrapper {
     background: $background;
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include mixins.flex($justify: center, $align: flex-start);
     padding: 2rem 1rem;
     font-family: 'Red Rose';
 }
@@ -15,47 +14,35 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.flex($align: center, $direction: column);
 
     .game__header-one {
         width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include mixins.flex($justify: space-around, $align: center);
         padding: 2rem;
         color: $color;
 
         .scrore__container {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            @include mixins.flex($align: center, $gap: 0.75rem);
             padding: 1rem;
             background: $button_dark_background;
 
 
             p {
-                font-size: 24px;
-                font-weight: 700;
+                @include mixins.text(24px, $font-weight-bold);
             }
 
             span {
-                font-size: 24px;
-                font-weight: 700;
+                @include mixins.text(24px, $font-weight-bold);
             }
         }
 
         h2 {
-            display: flex;
-            justify-content: center;
+            @include mixins.flex($justify: center, $align: center, $gap: 8px);
             align-content: center;
-            align-items: center;
-            gap: 8px;
 
             .title {
-                font-size: 26px;
-                font-weight: 400;
+                @include mixins.text(26px, $font-weight-regular);
             }
         }
     }
@@ -64,13 +51,10 @@
 .exit-btn {
     background: $button_dark_background;
     width: 200px;
-    height: 55px;
+    height: $control-height;
     border: none;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    @include mixins.flex-center($gap: 8px);
 
     &:hover {
         border: solid 1px $cards_primary;
@@ -78,8 +62,7 @@
     }
 
     span {
-        font-size: 24px;
-        font-weight: 700;
+        @include mixins.text(24px, $font-weight-bold);
         color: $color;
     }
 }
@@ -87,35 +70,26 @@
 .board {
     width: 100%;
     margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+    @include mixins.flex($justify: center);
 }
 
-// ── Theme 1: Code Vibes ──
+// ── Theme 1: Code Vibes.
 .game-theme--code-vibes {
     background: $background;
     font-family: 'Red Rose', sans-serif;
 }
 
-// ── Theme 2: Gaming ──
+// ── Theme 2: Gaming.
 .game-theme--gaming {
     background: #294f60;
     font-family: 'Orbitron', sans-serif;
 
     .game__header-one {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        height: 80px;
-        border: none;
-        background: #535d75;
-        border-radius: 10px;
-        padding: 1rem;
+        @include mixins.themed-game-header(#535d75);
 
         .game__title {
             .title {
-                font-size: 2rem;
-                font-weight: 700;
+                @include mixins.text(2rem, $font-weight-bold);
                 color: white;
             }
 
@@ -128,17 +102,16 @@
         }
 
         .scrore__container {
-            display: flex;
-            align-items: center;
+            @include mixins.flex($align: center);
             background: #ffffff;
             width: 200px;
             height: 56px;
-            border-radius: 10px;
+            border-radius: $theme-border-radius;
 
             span {
                 color: #097fc5;
                 font-size: 2rem;
-                font-weight: 700;
+                font-weight: $font-weight-bold;
                 padding-right: 1.5rem;
 
             }
@@ -181,27 +154,17 @@
     }
 }
 
-// ── Theme 3: DA Projects ──
+// ── Theme 3: DA Projects.
 .game-theme--da-projects {
     background: white;
     font-family: 'Figtree', sans-serif;
 
     .game__header-one {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        height: 80px;
-        border: none;
-        background: #f0f3f4;
-        border-radius: 10px;
-        padding: 1rem;
-        color: #097fc5;
-
+        @include mixins.themed-game-header(#f0f3f4, $color: #097fc5);
 
         .game__title {
             .title {
-                font-size: 2rem;
-                font-weight: 700;
+                @include mixins.text(2rem, $font-weight-bold);
 
             }
 
@@ -210,20 +173,18 @@
                 height: 40px;
                 width: 40px;
             }
-
         }
 
         .scrore__container {
-            display: flex;
-            align-items: center;
+            @include mixins.flex($align: center);
             background: white;
             width: 200px;
             height: 56px;
-            border-radius: 10px;
+            border-radius: $theme-border-radius;
 
             span {
                 font-size: 2rem;
-                font-weight: 700;
+                font-weight: $font-weight-bold;
                 padding-right: 1.5rem;
             }
 
@@ -235,8 +196,6 @@
                 height: 28px;
                 width: 22px;
             }
-
-
         }
     }
 
@@ -244,7 +203,6 @@
         background: #bfe5f2;
         border-radius: 8px;
         box-shadow: none;
-
 
         span {
             color: #097fc5;
@@ -270,27 +228,17 @@
     }
 }
 
-// ── Theme 4: Foods ──
+// ── Theme 4: Foods.
 .game-theme--foods {
     background: #fff8f0;
     font-family: 'Klee One', sans-serif;
 
     .game__header-one {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        height: 80px;
-        background: #f0e5d9;
-        border: 1px solid #fed7aa;
-        border-radius: 10px;
-        padding: 1rem;
-        color: #ea580c;
-
+        @include mixins.themed-game-header(#f0e5d9, 1px solid #fed7aa, $theme-orange);
 
         .game__title {
             .title {
-                font-size: 2rem;
-                font-weight: 700;
+                @include mixins.text(2rem, $font-weight-bold);
 
             }
 
@@ -299,22 +247,19 @@
                 height: 40px;
                 width: 40px;
             }
-
         }
 
         .scrore__container {
             background: white;
-            border-radius: 10px;
+            border-radius: $theme-border-radius;
             height: 54px;
             width: 180px;
-            display: flex;
-            justify-content: baseline;
-            align-items: center;
+            @include mixins.flex($justify: baseline, $align: center);
 
             span {
                 color: #28576b;
                 font-size: 2rem;
-                font-weight: 700;
+                font-weight: $font-weight-bold;
                 padding-right: 1.5rem;
                 font-family: 'Delius Unicase';
             }

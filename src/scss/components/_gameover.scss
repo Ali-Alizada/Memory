@@ -1,33 +1,25 @@
 @use "../abstract/variablen" as *;
+@use "../abstract/mixin" as mixins;
 
 .container__wrapper {
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.flex-center(column);
 
     .game-over {
         .main__container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include mixins.flex-center(column);
             padding-top: 6rem;
 
             h2 {
                 font-size: 1.6rem;
-                font-weight: 400;
+                font-weight: $font-weight-regular;
                 padding: 4rem 0 1rem 0;
                 color: white;
             }
 
             .scrore__container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 6px;
+                @include mixins.flex-center($gap: 6px);
                 padding: 1.5rem;
                 background: $button_dark_background;
                 margin-top: 1.5rem;
@@ -36,41 +28,29 @@
                     padding-left: 1rem;
                 }
 
-                .blue {
-                    font-size: 24px;
-                    font-weight: 700;
-                    color: #2bb1ff;
-                }
-
+                .blue,
                 .score__b {
-                    font-size: 24px;
-                    font-weight: 700;
-                    color: #2bb1ff;
+                    @include mixins.text(24px, $font-weight-bold);
+                    color: $blue-score;
                 }
 
-                .orange {
-                    font-size: 24px;
-                    font-weight: 700;
-                    color: #f58e39;
-                }
-
+                .orange,
                 .score__o {
-                    font-size: 24px;
-                    font-weight: 700;
-                    color: #f58e39;
+                    @include mixins.text(24px, $font-weight-bold);
+                    color: $orange-score;
                 }
             }
         }
     }
 
-    // ── Theme Overrides for Game Over ──
+    // ── Theme Overrides for Game Over:
     &.game-over-page.game-theme--gaming {
 
         .game-over {
             .main__container {
                 h2 {
                     color: white;
-                    font-weight: 700;
+                    font-weight: $font-weight-bold;
                     font-size: 28px;
                 }
 
@@ -117,10 +97,7 @@
                     background: white;
                     width: 180px;
                     height: 66px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
+                    @include mixins.flex-center($gap: 10px);
                     padding-right: 10px;
                     border-radius: 8px;
 
@@ -151,7 +128,7 @@
                 h2 {
 
                     color: #ffffff;
-                    font-weight: 600;
+                    font-weight: $font-weight-semibold;
                     font-size: 42px;
                 }
 
@@ -169,7 +146,7 @@
                     span {
                         font-size: 2.25rem;
                         padding-right: 14px;
-                        font-weight: 700;
+                        font-weight: $font-weight-bold;
                     }
                 }
 

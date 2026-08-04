@@ -1,28 +1,23 @@
 @use "../abstract/variablen" as *;
+@use "../abstract/mixin" as mixins;
 
 .overlay {
     position: fixed;
     inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1000;
     font-family: 'Red Rose', serif;
 
     &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include mixins.flex-center(column);
         width: 524px;
         height: 270px;
         background-color: $color;
         box-sizing: border-box;
 
         p {
-            font-size: 32px;
-            font-weight: 700;
+            @include mixins.text(32px, $font-weight-bold);
             text-align: center;
             padding-bottom: 2rem;
             color: $background;
@@ -30,14 +25,10 @@
     }
 
     .overlayBtns {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        @include mixins.flex-center($gap: 1rem);
 
         button {
-            font-size: 20px;
-            font-weight: 700;
+            @include mixins.text(20px, $font-weight-bold);
             gap: 10px;
             padding: 0.7rem 1rem;
             cursor: pointer;
@@ -58,19 +49,18 @@
 }
 
 .hidden {
-    display: none;
-}
+        display: none;
+    }
 
 .overlay--gaming {
     font-family: 'Orbitron';
 
     .overlay__content {
         background: white;
-        border-radius: 16px;
+        border-radius: $theme-overlay-border-radius;
 
         p {
-            font-size: 28px;
-            font-weight: 700;
+            @include mixins.text(28px, $font-weight-bold);
             color: #294f60;
         }
     }
@@ -78,8 +68,7 @@
     .overlayBtns {
 
         button {
-            font-size: 1rem;
-            font-weight: 700;
+            @include mixins.text(1rem, $font-weight-bold);
             border-radius: 12px;
         }
 
@@ -100,11 +89,10 @@
 
     .overlay__content {
         background: #F0F6F9;
-        border-radius: 16px;
+        border-radius: $theme-overlay-border-radius;
 
         p {
-            font-size: 28px;
-            font-weight: 700;
+            @include mixins.text(28px, $font-weight-bold);
             color: #294f60;
         }
     }
@@ -112,8 +100,7 @@
     .overlayBtns {
 
         button {
-            font-size: 1rem;
-            font-weight: 700;
+            @include mixins.text(1rem, $font-weight-bold);
             border-radius: 12px;
         }
 
@@ -128,28 +115,24 @@
             background: #FD8A81;
         }
     }
-
 }
-
 
 .overlay--foods {
     font-family: 'Klee One', sans-serif;
 
     .overlay__content {
         background: #f6f6f6;
-        border-radius: 16px;
+        border-radius: $theme-overlay-border-radius;
 
         p {
-            font-size: 28px;
-            font-weight: 600;
+            @include mixins.text(28px, $font-weight-semibold);
             color: #294f60;
         }
     }
 
     .overlayBtns {
         button {
-            font-size: 1rem;
-            font-weight: 700;
+            @include mixins.text(1rem, $font-weight-bold);
             border-radius: 12px;
             font-family: 'Delius Unicase', sans-serif;
         }
@@ -167,5 +150,4 @@
             border: 1px solid #ea580c;
         }
     }
-
 }

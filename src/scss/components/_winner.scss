@@ -1,4 +1,5 @@
 @use "../abstract/variablen" as *;
+@use "../abstract/mixin" as mixins;
 
 .winner.container__wrapper,
 .draw.container__wrapper {
@@ -34,24 +35,21 @@
     .main__container {
         position: relative;
         z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include mixins.flex-center(column);
         box-sizing: border-box;
         min-height: 100vh;
         padding-top: clamp(17rem, 35vh, 22rem);
 
         h2 {
             font-size: 40px;
-            font-weight: 400;
+            font-weight: $font-weight-regular;
             color: white;
             padding: 0;
         }
 
         h3 {
             font-size: 60px;
-            font-weight: 700;
+            font-weight: $font-weight-bold;
             color: white;
         }
 
@@ -78,15 +76,12 @@
         .back-btn {
             background: $button_dark_background;
             width: 200px;
-            height: 55px;
-            font-size: 24px;
-            font-weight: 700;
+            height: $control-height;
+            @include mixins.text(24px, $font-weight-bold);
             color: $color;
             border: solid 1px $cards_primary;
             cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include mixins.flex-center;
             margin-bottom: 100px;
 
             &:hover {
@@ -148,7 +143,7 @@
     }
 }
 
-// ── Theme Overrides for Winner & Draw ──
+// ── Theme Overrides for Winner & Draw:
 
 // Gaming Theme
 .game-theme--gaming {
@@ -189,7 +184,6 @@
                 img {
                     width: 340px;
                     height: 272px;
-                    // margin: 26px;
                 }
             }
         }

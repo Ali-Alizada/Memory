@@ -1,12 +1,10 @@
 @use "../abstract/variablen" as *;
+@use "../abstract/mixin" as mixins;
 
 .home {
     min-height: 100vh;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flex-center(column);
     background: $background;
     color: $color;
 
@@ -14,15 +12,13 @@
         margin-bottom: 6rem;
 
         p {
-            font-size: 3rem;
-            font-weight: 400;
+            @include mixins.text(3rem, $font-weight-regular);
             line-height: 100%;
             font-family: 'Almarai';
         }
 
         h1 {
-            font-size: 8.5rem;
-            font-weight: 700;
+            @include mixins.text(8.5rem, $font-weight-bold);
             line-height: 1.3;
             font-family: 'Red Rose';
         }
@@ -40,9 +36,7 @@
 .home__footer {
     position: absolute;
     bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center;
     text-align: center;
     font-family: 'Almarai';
 }
@@ -50,17 +44,13 @@
 .btn {
     width: 250px;
     height: 98px;
-    font-size: 40px;
-    font-weight: 700;
+    @include mixins.text(40px, $font-weight-bold);
     background: $button_color;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flex-center($gap: 14px);
     font-family: 'Red Rose';
-    gap: 14px;
     transition:
         transform 300ms ease,
         box-shadow 300ms ease;
