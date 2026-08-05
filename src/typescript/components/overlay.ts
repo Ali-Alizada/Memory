@@ -1,6 +1,11 @@
 import { gameSettings } from "./settings/_settingState";
 import { overlayTemplate } from "./templates/_overlay-template";
 
+/**
+ * Selects overlay button labels for the active theme.
+ *
+ * @returns The stay and exit button labels.
+ */
 function getOverlayTexts() {
     const theme = gameSettings.theme;
 
@@ -15,6 +20,12 @@ function getOverlayTexts() {
     };
 }
 
+/**
+ * Registers controls that close the overlay or exit the game.
+ *
+ * @param overlay - Overlay element that receives the listeners.
+ * @param onExit - Callback invoked when the exit action is selected.
+ */
 function addOverlayEvents(
     overlay: HTMLElement,
     onExit: () => void
@@ -32,6 +43,13 @@ function addOverlayEvents(
     });
 }
 
+/**
+ * Creates and appends the game-exit confirmation overlay.
+ *
+ * @param app - Application container that receives the overlay.
+ * @param onExit - Callback invoked after confirming the exit.
+ * @returns The generated overlay element.
+ */
 export function createExitOverlay(
     app: HTMLElement,
     onExit: () => void

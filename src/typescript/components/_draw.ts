@@ -3,6 +3,11 @@ import { gameSettings } from "./settings/_settingState";
 import { getThemeConfig } from "../theme/index";
 import { drawTemplate } from "./templates/_draw-template";
 
+/**
+ * Renders the draw screen for the active theme.
+ *
+ * @param app - Application container that receives the draw view.
+ */
 export function renderDraw(app: HTMLElement): void {
     const themeConfig = getThemeConfig(gameSettings.theme);
     const backButtonText = gameSettings.theme === "code-vibes"

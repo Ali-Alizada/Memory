@@ -1,3 +1,8 @@
+/**
+ * Generates the markup for the game settings screen.
+ *
+ * @returns The settings screen markup.
+ */
 export function settingsTemplate(): string {
 
     return `

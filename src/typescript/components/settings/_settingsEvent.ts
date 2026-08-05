@@ -26,6 +26,12 @@ const boardNames: Record<string, string> = {
 };
 
 
+/**
+ * Updates the theme preview image.
+ *
+ * @param preview - Image element that displays the preview.
+ * @param theme - Identifier of the selected theme.
+ */
 function updatePreview(
     preview: HTMLImageElement | null,
     theme: string
@@ -37,10 +43,13 @@ function updatePreview(
         themes["code-vibes"];
 }
 
-
+/**
+ * Initializes settings controls and synchronizes them with the current state.
+ *
+ * @param app - Application container containing the settings view.
+ */
 export function initSettingsEvents(app: HTMLElement) {
     const elements = getSettingsElements(app);
-
     initThemeEvents(app, elements);
     initPlayerEvents(app, elements.playerRadios);
     initBoardEvents(app, elements.boardRadios);
@@ -50,7 +59,12 @@ export function initSettingsEvents(app: HTMLElement) {
     updateStartPanel(app);
 }
 
-
+/**
+ * Collects the settings form elements from the application container.
+ *
+ * @param app - Application container containing the settings view.
+ * @returns The preview image and settings radio groups.
+ */
 function getSettingsElements(app: HTMLElement) {
     return {
         preview: app.querySelector<HTMLImageElement>("#themPreview"),
@@ -66,33 +80,33 @@ function getSettingsElements(app: HTMLElement) {
     };
 }
 
-
+/**
+ * Registers theme selection events and preview updates.
+ *
+ * @param app - Application container containing the settings view.
+ * @param elements - Collected settings form elements.
+ */
 function initThemeEvents(
-    app: HTMLElement,
-    elements: ReturnType<typeof getSettingsElements>
+    app: HTMLElement, elements: ReturnType<typeof getSettingsElements>
 ) {
     elements.radios.forEach((radio) => {
-        const update = () =>
-            updatePreview(elements.preview, radio.value);
-
-        const label = app.querySelector<HTMLLabelElement>(
-            `label[for="${radio.id}"]`
-        );
-
+        const update = () => updatePreview(elements.preview, radio.value);
+        const label = app.querySelector<HTMLLabelElement>(`label[for="${radio.id}"]`);
         radio.addEventListener("mouseenter", update);
         radio.addEventListener("focus", update);
-
-        radio.addEventListener("change", () => {
-            gameSettings.theme = radio.value;
+        radio.addEventListener("change", () => {gameSettings.theme = radio.value;
             update();
-            updateStartPanel(app);
-        });
-
+            updateStartPanel(app);});
         addLabelEvents(label, update);
     });
 }
 
-
+/**
+ * Registers preview events for an available theme label.
+ *
+ * @param label - Theme label that receives the listeners.
+ * @param callback - Callback that updates the preview.
+ */
 function addLabelEvents(
     label: HTMLLabelElement | null,
     callback: () => void
@@ -105,6 +119,12 @@ function addLabelEvents(
 }
 
 
+/**
+ * Registers player selection events.
+ *
+ * @param app - Application container containing the settings view.
+ * @param radios - Player selection controls.
+ */
 function initPlayerEvents(
     app: HTMLElement,
     radios: NodeListOf<HTMLInputElement>
@@ -118,6 +138,12 @@ function initPlayerEvents(
 }
 
 
+/**
+ * Registers board-size selection events.
+ *
+ * @param app - Application container containing the settings view.
+ * @param radios - Board-size selection controls.
+ */
 function initBoardEvents(
     app: HTMLElement,
     radios: NodeListOf<HTMLInputElement>
@@ -131,6 +157,11 @@ function initBoardEvents(
 }
 
 
+/**
+ * Marks controls that correspond to the current settings as selected.
+ *
+ * @param elements - Collected settings form elements.
+ */
 function restoreSettings(
     elements: ReturnType<typeof getSettingsElements>
 ) {
@@ -140,6 +171,12 @@ function restoreSettings(
 }
 
 
+/**
+ * Selects the radio control with the provided value when present.
+ *
+ * @param radios - Radio controls to search.
+ * @param value - Value to select.
+ */
 function checkRadio(
     radios: NodeListOf<HTMLInputElement>,
     value: string
@@ -153,6 +190,11 @@ function checkRadio(
 }
 
 
+/**
+ * Updates the start panel text and enabled state.
+ *
+ * @param app - Application container containing the settings view.
+ */
 function updateStartPanel(app: HTMLElement) {
     const elements = getPanelElements(app);
 
@@ -163,6 +205,12 @@ function updateStartPanel(app: HTMLElement) {
 }
 
 
+/**
+ * Collects the controls displayed in the start panel.
+ *
+ * @param app - Application container containing the settings view.
+ * @returns The panel controls, or `null` when one is missing.
+ */
 function getPanelElements(app: HTMLElement) {
     const theme = app.querySelector<HTMLButtonElement>("#selectedTheme");
     const player = app.querySelector<HTMLButtonElement>("#selectedPlayer");
@@ -173,14 +221,16 @@ function getPanelElements(app: HTMLElement) {
     }
 
     return {
-        theme,
-        player,
-        board,
-        start,
+        theme, player, board, start,
     };
 }
 
 
+/**
+ * Updates the start panel labels from the selected settings.
+ *
+ * @param elements - Start panel controls to update.
+ */
 function updatePanelTexts(
     elements: NonNullable<ReturnType<typeof getPanelElements>>
 ) {
@@ -195,6 +245,12 @@ function updatePanelTexts(
 }
 
 
+/**
+ * Enables or disables the start panel according to settings completeness.
+ *
+ * @param elements - Start panel controls to update.
+ * @param app - Application container containing the start panel.
+ */
 function updatePanelState(
     elements: NonNullable<ReturnType<typeof getPanelElements>>,
     app: HTMLElement
@@ -206,8 +262,5 @@ function updatePanelState(
     elements.start.disabled = !complete;
     
     app.querySelector(".start__pannel")
-        ?.classList.toggle(
-            "start__pannel--disabled",
-            !complete
-        );
+    ?.classList.toggle("start__pannel--disabled", !complete);
 }

@@ -1,6 +1,12 @@
 import { gameSettings } from ".././settings/_settingState";
 import { getThemeConfig } from "../../theme";
 
+/**
+ * Generates the markup for the final-score screen.
+ *
+ * @param scores - Final scores for both players.
+ * @returns The game-over screen markup.
+ */
 export function gameOverTemplate(scores: {
     bluePlayer: number;
     orangePlayer: number;

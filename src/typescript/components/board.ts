@@ -9,10 +9,23 @@ const boardSizeMap: Record<string, number> = {
     boardLarge: 36,
 };
 
+/**
+ * Returns the provided items in a randomized order.
+ *
+ * @param items - Items to shuffle.
+ * @returns A shuffled copy of the items.
+ */
 function shuffle<T>(items: T[]): T[] {
     return [...items].sort(() => Math.random() - 0.5);
 }
 
+/**
+ * Creates a shuffled card board for the selected theme and size.
+ *
+ * @param themeId - Identifier of the active theme.
+ * @param boardSizeKey - Key that selects the number of cards.
+ * @returns The generated board element.
+ */
 export function createBoard(themeId: string, boardSizeKey: string): HTMLElement {
     const themeConfig = getThemeConfig(themeId);
     const cards: Card[] = cardSets[themeConfig.key] ?? cardSets.codeVibes;

@@ -1,5 +1,11 @@
 import { ThemeConfig } from "../../theme/types"; 
 
+/**
+ * Generates the markup for the active game screen.
+ *
+ * @param themeConfig - Configuration for the active theme.
+ * @returns The game screen markup.
+ */
 export function gameTemplate(themeConfig: ThemeConfig): string {
     return `
     <div class="container__wrapper ${themeConfig.cssClass}">

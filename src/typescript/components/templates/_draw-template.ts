@@ -1,3 +1,12 @@
+/**
+ * Generates the markup for the draw screen.
+ *
+ * @param cssClass - Theme CSS class for the screen.
+ * @param drawTextImg - Source of the draw text image.
+ * @param drawIcon - Source of the draw icon.
+ * @param backButtonText - Label for the navigation button.
+ * @returns The draw screen markup.
+ */
 export function drawTemplate(
     cssClass: string,
     drawTextImg: string,

@@ -1,3 +1,8 @@
+/**
+ * Generates the markup for the home screen.
+ *
+ * @returns The home screen markup.
+ */
 export function homeTemplate(): string {
     return `
         <section class="screen home">

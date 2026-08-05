@@ -11,6 +11,12 @@ interface WinnerTemplateProps {
     confettiSrc?: string;
 }
 
+/**
+ * Generates the markup for the winner screen.
+ *
+ * @param props - Winner display details.
+ * @returns The winner screen markup.
+ */
 export function winnerTemplate({
     winnerName,
     cssClass,

@@ -17,6 +17,11 @@ type GameState = {
   isProcessing: boolean;
 };
 
+/**
+ * Renders a new game using the active settings.
+ *
+ * @param app - Application container that receives the game view.
+ */
 export function renderGame(app: HTMLElement) {
   const themeConfig = getThemeConfig(gameSettings.theme);
 
@@ -28,6 +33,11 @@ export function renderGame(app: HTMLElement) {
   initExit(app);
 }
 
+/**
+ * Creates the initial state for a game round.
+ *
+ * @returns The initialized game state.
+ */
 function initGameState(): GameState {
   return {
     currentPlayer:
@@ -42,6 +52,13 @@ function initGameState(): GameState {
   };
 }
 
+/**
+ * Updates the score and current-player indicator in the game header.
+ *
+ * @param app - Application container containing the header.
+ * @param themeConfig - Configuration for the active theme.
+ * @param game - Current game state.
+ */
 function updateHeader(app: HTMLElement, themeConfig: ThemeConfig, game: GameState,) {
   const blueScore = app.querySelector("#score-blue");
   const orangeScore = app.querySelector("#score-orange");
@@ -55,11 +72,23 @@ function updateHeader(app: HTMLElement, themeConfig: ThemeConfig, game: GameStat
     playerIcon.src = game.currentPlayer === "bluePlayer" ? themeConfig.header.blueLabelIcon : themeConfig.header.orangeLabelIcon; }
 }
 
+/**
+ * Adds a card board configured with the active game settings.
+ *
+ * @param app - Application container containing the board placeholder.
+ */
 function createGameBoard(app: HTMLElement) {
   const board = app.querySelector(".board");
   board?.appendChild(createBoard(gameSettings.theme, gameSettings.boards));
 }
 
+/**
+ * Registers card-click handling for every card on the board.
+ *
+ * @param app - Application container for the game.
+ * @param themeConfig - Configuration for the active theme.
+ * @param game - Current game state.
+ */
 function initCards(
   app: HTMLElement,
   themeConfig: ThemeConfig,
@@ -74,6 +103,15 @@ function initCards(
   });
 }
 
+/**
+ * Processes a selected card and starts a match check for a pair.
+ *
+ * @param card - Selected card element.
+ * @param cards - All card elements on the board.
+ * @param app - Application container for the game.
+ * @param themeConfig - Configuration for the active theme.
+ * @param game - Current game state.
+ */
 function handleCardClick(
   card: HTMLElement, cards: NodeListOf<HTMLElement>, app: HTMLElement, themeConfig: ThemeConfig, game: GameState,
 ) { if (game.isProcessing) return;
@@ -88,6 +126,16 @@ function handleCardClick(
   checkMatch(card1, card2, cards, app, themeConfig, game);
 }
 
+/**
+ * Resolves whether two flipped cards form a matching pair.
+ *
+ * @param card1 - First flipped card.
+ * @param card2 - Second flipped card.
+ * @param cards - All card elements on the board.
+ * @param app - Application container for the game.
+ * @param themeConfig - Configuration for the active theme.
+ * @param game - Current game state.
+ */
 function checkMatch(
   card1: HTMLElement, card2: HTMLElement, cards: NodeListOf<HTMLElement>, app: HTMLElement, themeConfig: ThemeConfig, game: GameState,
 ) {
@@ -113,6 +161,13 @@ function checkMatch(
   }, 1000);
 }
 
+/**
+ * Displays the game-over view when every card has been matched.
+ *
+ * @param cards - All card elements on the board.
+ * @param app - Application container for the game.
+ * @param scores - Final scores for both players.
+ */
 function checkGameFinished(
   cards: NodeListOf<HTMLElement>,
   app: HTMLElement,
@@ -129,6 +184,11 @@ function checkGameFinished(
   }
 }
 
+/**
+ * Sets up the exit overlay and its trigger button.
+ *
+ * @param app - Application container for the game.
+ */
 function initExit(app: HTMLElement) {
   const overlay = createExitOverlay(app, () => renderSettings(app));
 
