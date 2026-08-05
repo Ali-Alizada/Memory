@@ -1,32 +1,32 @@
 # Memory Game
 
-Ein modernes, responsives Memory Game, entwickelt mit TypeScript. Wähle ein Theme, konfiguriere die Anzahl der Spieler und die Spielfeldgröße und finde die meisten passenden Kartenpaare.
+A modern, responsive Memory Game built with TypeScript. Choose a theme, configure the player count and board size, then find the most matching card pairs.
 
-## Übersicht
+## Overview
 
-Memory Game verbindet klassisches Karten-Matching mit einer konfigurierbaren, theme-basierten Benutzeroberfläche. Die Anwendung unterstützt verschiedene Spielmodi und liefert für jede Spielsituation ein passendes Ergebnis-Overlay.
+Memory Game combines classic card matching with a configurable, theme-based user interface. The application supports multiple game modes and provides a dedicated result overlay for every game outcome.
 
 
 ## Features
 
-- Auswahl aus mehreren visuellen Game-Themes.
-- Konfiguration der Spieleranzahl vor Spielbeginn.
-- Unterschiedliche Board-Größen für variable Schwierigkeitsstufen.
-- Eigene Ergebnisansichten für Gewinner, Unentschieden und Game Over.
-- Responsives Layout für Desktop, Tablet und Mobilgeräte.
-- Theme-basierte UI-Anpassungen für Karten, Farben und Spieloberflächen.
-- Wiederverwendbare Komponenten für Einstellungen, Spielfeld, Overlays und Ergebnisansichten.
-- Typsichere Architektur mit TypeScript für besser wartbaren Anwendungscode.
+- Select from multiple visual game themes.
+- Configure the number of players before starting a game.
+- Choose different board sizes for flexible difficulty levels.
+- Dedicated result screens for winners, draws, and game-over states.
+- Responsive layout for desktop, tablet, and mobile devices.
+- Theme-based UI customisation for cards, colours, and game surfaces.
+- Reusable components for settings, the game board, overlays, and result views.
+- Type-safe TypeScript architecture for more maintainable application code.
 
-## Technologien
+## Tech Stack
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-## Projektstruktur
+## Project Structure
 
 ```text
 src/
@@ -49,44 +49,44 @@ src/
     └── main.ts
 ```
 
-- `assets/images/` enthält die Bilder und SVG-Assets der unterschiedlichen Spiel-Themes.
-- `scss/` enthält die Stylesheets; `abstract/` bündelt Variablen, Mixins und Hilfsfunktionen, während `components/` die komponentenspezifischen Styles enthält.
-- `typescript/components/` enthält die UI-Logik für Spielfeld, Karten, Einstellungen, Overlays und Ergebnisansichten.
-- `typescript/components/templates/` trennt die HTML-Templates von der Komponentenlogik.
-- `typescript/data/` stellt die Karten-Daten für die verfügbaren Themes sowie gemeinsame Typen bereit.
-- `typescript/theme/` verwaltet Theme-Konfigurationen und deren Typdefinitionen.
-- `typescript/game.ts` enthält die zentrale Spiellogik; `typescript/main.ts` ist der Einstiegspunkt der Anwendung.
+- `assets/images/` contains images and SVG assets for the different game themes.
+- `scss/` contains the stylesheets; `abstract/` groups variables, mixins, and helper functions, while `components/` contains component-specific styles.
+- `typescript/components/` contains UI logic for the game board, cards, settings, overlays, and result views.
+- `typescript/components/templates/` separates HTML templates from component logic.
+- `typescript/data/` provides card data for the available themes and shared types.
+- `typescript/theme/` manages theme configurations and their type definitions.
+- `typescript/game.ts` contains the core game logic; `typescript/main.ts` is the application's entry point.
 
-## Architektur
+## Architecture
 
-Die Anwendung folgt einer komponentenbasierten Struktur: einzelne Bereiche wie Einstellungen, Spielfeld und Ergebnisansichten sind klar voneinander getrennt. HTML-Templates und TypeScript-Logik werden separat gehalten, wodurch Komponenten leichter verständlich und wiederverwendbar bleiben. Gemeinsame Funktionen bündeln wiederkehrende Abläufe; zentrale Theme-Dateien steuern die visuellen Varianten der Oberfläche.
+The application follows a component-based structure: areas such as settings, the game board, and result views are clearly separated. HTML templates and TypeScript logic are kept apart, making components easier to understand and reuse. Shared functions encapsulate recurring behaviour, while central theme files control the visual variations of the interface.
 
-## Installation & Start
+## Installation & Getting Started
 
-**Voraussetzung:** Node.js (empfohlen: aktuelle LTS-Version)
+**Prerequisite:** Node.js (the current LTS version is recommended)
 
 ```bash
 npm install
 ```
 
-Entwicklungsserver starten:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Produktions-Build erstellen:
+Create a production build:
 
 ```bash
 npm run build
 ```
 
-Den Build lokal prüfen:
+Preview the production build locally:
 
 ```bash
 npm run preview
 ```
 
-## Lizenz
+## License
 
-Dieses Projekt steht unter der im Repository hinterlegten Lizenz.
+This project is available under the license included in the repository.
