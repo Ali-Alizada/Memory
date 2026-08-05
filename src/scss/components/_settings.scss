@@ -88,7 +88,7 @@
 }
 
 .container-right {
-    min-width: 600px;
+    min-width: 680px;
     padding-top: 5rem;
     @include mixins.flex($direction: column);
 }
@@ -97,20 +97,22 @@
     @include mixins.flex;
     width: 460px;
     height: auto;
+    padding-left: 90px;
 }
 
 .start__pannel {
-    width: 100%;
+    width: 95%;
     @include mixins.flex-between;
     margin-top: 3rem;
     padding: 1rem;
     background: #f0f0f0;
     transition: opacity 0.2s ease;
+    word-break: break-all;
 
     &--disabled {
         opacity: 0.55;
     }
-
+ 
     .game__button {
         height: $control-height;
         @include mixins.flex-center($gap: 14px);
