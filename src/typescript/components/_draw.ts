@@ -5,7 +5,6 @@ import { drawTemplate } from "./templates/_draw-template";
 
 export function renderDraw(app: HTMLElement): void {
     const themeConfig = getThemeConfig(gameSettings.theme);
-
     const backButtonText =
         gameSettings.theme === "code-vibes"
             ? "Back to start"

@@ -6,13 +6,6 @@ Ein modernes, responsives Memory Game, entwickelt mit TypeScript. Wähle ein The
 
 Memory Game verbindet klassisches Karten-Matching mit einer konfigurierbaren, theme-basierten Benutzeroberfläche. Die Anwendung unterstützt verschiedene Spielmodi und liefert für jede Spielsituation ein passendes Ergebnis-Overlay.
 
-## Screenshots & Demo
-
-> Screenshots oder eine GIF-Demo können im folgenden Bereich ergänzt werden.
-
-![Memory Game – Spielfeld](/assets/screenshots/game-screen.png)
-
-_Empfohlener Ablageort für weitere Medien: `/assets/screenshots/`_
 
 ## Features
 
@@ -38,23 +31,31 @@ _Empfohlener Ablageort für weitere Medien: `/assets/screenshots/`_
 ```text
 src/
 ├── assets/
-├── components/
-│   ├── settings/
-│   ├── winner/
-│   ├── draw/
-│   └── overlay/
-├── game/
-├── data/
-├── theme/
-└── main.ts
+│   └── images/
+├── scss/
+│   ├── abstract/
+│   ├── components/
+│   └── style.scss
+└── typescript/
+    ├── components/
+    │   ├── settings/
+    │   ├── templates/
+    │   ├── board.ts
+    │   ├── cards.ts
+    │   └── overlay.ts
+    ├── data/
+    ├── theme/
+    ├── game.ts
+    └── main.ts
 ```
 
-- `assets/` enthält Bilder und weitere statische Medien.
-- `components/` bündelt UI-Komponenten, Einstellungen sowie Ergebnis- und Overlay-Ansichten.
-- `game/` enthält die zentrale Spiellogik und den Ablauf einer Partie.
-- `data/` stellt Kartensätze und zugehörige Datentypen bereit.
-- `theme/` verwaltet Theme-Konfigurationen und deren Typdefinitionen.
-- `main.ts` ist der Einstiegspunkt der Anwendung.
+- `assets/images/` enthält die Bilder und SVG-Assets der unterschiedlichen Spiel-Themes.
+- `scss/` enthält die Stylesheets; `abstract/` bündelt Variablen, Mixins und Hilfsfunktionen, während `components/` die komponentenspezifischen Styles enthält.
+- `typescript/components/` enthält die UI-Logik für Spielfeld, Karten, Einstellungen, Overlays und Ergebnisansichten.
+- `typescript/components/templates/` trennt die HTML-Templates von der Komponentenlogik.
+- `typescript/data/` stellt die Karten-Daten für die verfügbaren Themes sowie gemeinsame Typen bereit.
+- `typescript/theme/` verwaltet Theme-Konfigurationen und deren Typdefinitionen.
+- `typescript/game.ts` enthält die zentrale Spiellogik; `typescript/main.ts` ist der Einstiegspunkt der Anwendung.
 
 ## Architektur
 

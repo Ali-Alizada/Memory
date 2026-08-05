@@ -4,100 +4,175 @@ import { gameSettings } from "./components/settings/_settingState";
 import { renderGameOver } from "./components/_gameover";
 import { renderSettings } from "./components/settings/_settings";
 import { getThemeConfig } from "./theme/index";
+import type { ThemeConfig } from "./theme/types";
 import { gameTemplate } from "./components/templates/_game-template";
 
+type GameState = {
+  currentPlayer: "bluePlayer" | "orangePlayer";
+  scores: {
+    bluePlayer: number;
+    orangePlayer: number;
+  };
+  flippedCards: HTMLElement[];
+  isProcessing: boolean;
+};
+
 export function renderGame(app: HTMLElement) {
-    const themeConfig = getThemeConfig(gameSettings.theme);
+  const themeConfig = getThemeConfig(gameSettings.theme);
 
-    app.innerHTML = gameTemplate(themeConfig);
+  app.innerHTML = gameTemplate(themeConfig);
 
-    // Initialize state
-    let currentPlayer = gameSettings.player || "bluePlayer";
-    const scores = {
-        bluePlayer: 0,
-        orangePlayer: 0
-    };
-    let flippedCards: HTMLElement[] = [];
-    let isProcessing = false;
+  const game = initGameState();
 
-    // Elements
-    const scoreBlueEl = app.querySelector("#score-blue");
-    const scoreOrangeEl = app.querySelector("#score-orange");
-    const currentPlayerIcon = app.querySelector("#current-player-icon") as HTMLImageElement;
-    const boardRoot = app.querySelector(".board");
+  updateHeader(app, themeConfig, game);
 
-    const updateHeader = () => {
-        if (scoreBlueEl) scoreBlueEl.textContent = String(scores.bluePlayer);
-        if (scoreOrangeEl) scoreOrangeEl.textContent = String(scores.orangePlayer);
-        if (currentPlayerIcon) {
-            currentPlayerIcon.src = currentPlayer === "bluePlayer"
-                ? themeConfig.header.blueLabelIcon
-                : themeConfig.header.orangeLabelIcon;
-        }
-    };
+  createGameBoard(app);
 
-    updateHeader();
+  initCards(app, themeConfig, game);
 
-    if (boardRoot) {
-        boardRoot.appendChild(createBoard(gameSettings.theme, gameSettings.boards));
-    }
+  initExit(app);
+}
 
-    const cardElements = app.querySelectorAll<HTMLElement>(".card");
-    cardElements.forEach((cardEl) => {
-        cardEl.addEventListener("click", () => {
-            if (isProcessing) return;
-            if (cardEl.classList.contains("flipped") || cardEl.classList.contains("matched")) return;
+function initGameState(): GameState {
+  return {
+    currentPlayer:
+      (gameSettings.player as "bluePlayer" | "orangePlayer") || "bluePlayer",
 
+    scores: {
+      bluePlayer: 0,
+      orangePlayer: 0,
+    },
 
-            cardEl.classList.add("flipped");
-            flippedCards.push(cardEl);
+    flippedCards: [],
 
-            if (flippedCards.length === 2) {
-                isProcessing = true;
-                const [card1, card2] = flippedCards;
-                const pairId1 = card1.dataset.pairId;
-                const pairId2 = card2.dataset.pairId;
+    isProcessing: false,
+  };
+}
 
-                if (pairId1 === pairId2) {
+function updateHeader(
+  app: HTMLElement,
+  themeConfig: ThemeConfig,
+  game: GameState,
+) {
+  const blueScore = app.querySelector("#score-blue");
+  const orangeScore = app.querySelector("#score-orange");
+  const playerIcon = app.querySelector(
+    "#current-player-icon",
+  ) as HTMLImageElement | null;
 
-                    card1.classList.add("matched");
-                    card2.classList.add("matched");
-                    
-                    scores[currentPlayer as keyof typeof scores] += 1;
-                    updateHeader();
-                    
-                    flippedCards = [];
-                    isProcessing = false;
+  if (blueScore) {
+    blueScore.textContent = String(game.scores.bluePlayer);
+  }
 
-                    const allMatched = Array.from(cardElements).every((c) => c.classList.contains("matched"));
-                    if (allMatched) {
-                        setTimeout(() => {
-                            renderGameOver(app, scores);
-                        }, 600);
-                    }
-                } else {
-                    // Mismatch, flip back after delay and switch player
-                    setTimeout(() => {
-                        card1.classList.remove("flipped");
-                        card2.classList.remove("flipped");
-                        flippedCards = [];
-                        
-                        currentPlayer = currentPlayer === "bluePlayer" ? "orangePlayer" : "bluePlayer";
-                        updateHeader();
-                        
-                        isProcessing = false;
-                    }, 1000);
-                }
-            }
-        });
+  if (orangeScore) {
+    orangeScore.textContent = String(game.scores.orangePlayer);
+  }
+
+  if (playerIcon) {
+    playerIcon.src =
+      game.currentPlayer === "bluePlayer" ?
+        themeConfig.header.blueLabelIcon
+      : themeConfig.header.orangeLabelIcon;
+  }
+}
+
+function createGameBoard(app: HTMLElement) {
+  const board = app.querySelector(".board");
+
+  board?.appendChild(createBoard(gameSettings.theme, gameSettings.boards));
+}
+
+function initCards(
+  app: HTMLElement,
+  themeConfig: ThemeConfig,
+  game: GameState,
+) {
+  const cards = app.querySelectorAll<HTMLElement>(".card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      handleCardClick(card, cards, app, themeConfig, game);
     });
+  });
+}
 
-    const overlay = createExitOverlay(app, () => {
-        renderSettings(app);
-    });
+function handleCardClick(
+  card: HTMLElement,
+  cards: NodeListOf<HTMLElement>,
+  app: HTMLElement,
+  themeConfig: ThemeConfig,
+  game: GameState,
+) {
+  if (game.isProcessing) return;
 
-    const extBtn = app.querySelector("#exit-btn");
-    extBtn?.addEventListener("click", () => {
-        overlay?.classList.remove("hidden");
-    });
+  if (card.classList.contains("flipped") || card.classList.contains("matched"))
+    return;
+
+  card.classList.add("flipped");
+  game.flippedCards.push(card);
+  if (game.flippedCards.length !== 2) return;
+  game.isProcessing = true;
+  const [card1, card2] = game.flippedCards;
+
+  checkMatch(card1, card2, cards, app, themeConfig, game);
+}
+
+function checkMatch(
+  card1: HTMLElement,
+  card2: HTMLElement,
+  cards: NodeListOf<HTMLElement>,
+  app: HTMLElement,
+  themeConfig: ThemeConfig,
+  game: GameState,
+) {
+  const isMatch = card1.dataset.pairId === card2.dataset.pairId;
+
+  if (isMatch) {
+    card1.classList.add("matched");
+    card2.classList.add("matched");
+    game.scores[game.currentPlayer]++;
+
+    game.flippedCards = [];
+    game.isProcessing = false;
+    updateHeader(app, themeConfig, game);
+    checkGameFinished(cards, app, game.scores);
+
+    return;
+  }
+
+  setTimeout(() => {
+    card1.classList.remove("flipped");
+    card2.classList.remove("flipped");
+    game.flippedCards = [];
+    game.currentPlayer =
+      game.currentPlayer === "bluePlayer" ? "orangePlayer" : "bluePlayer";
+
+    updateHeader(app, themeConfig, game);
+
+    game.isProcessing = false;
+  }, 1000);
+}
+
+function checkGameFinished(
+  cards: NodeListOf<HTMLElement>,
+  app: HTMLElement,
+  scores: GameState["scores"],
+) {
+  const finished = Array.from(cards).every((card) =>
+    card.classList.contains("matched"),
+  );
+
+  if (finished) {
+    setTimeout(() => {
+      renderGameOver(app, scores);
+    }, 600);
+  }
+}
+
+function initExit(app: HTMLElement) {
+  const overlay = createExitOverlay(app, () => renderSettings(app));
+
+  app.querySelector("#exit-btn")?.addEventListener("click", () => {
+    overlay.classList.remove("hidden");
+  });
 }
