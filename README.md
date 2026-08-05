@@ -18,6 +18,33 @@ Memory Game combines classic card matching with a configurable, theme-based user
 - Reusable components for settings, the game board, overlays, and result views.
 - Type-safe TypeScript architecture for more maintainable application code.
 
+## Installation & Getting Started
+
+**Prerequisite:** Node.js (the current LTS version is recommended)
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+
 ## Tech Stack
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -61,31 +88,6 @@ src/
 
 The application follows a component-based structure: areas such as settings, the game board, and result views are clearly separated. HTML templates and TypeScript logic are kept apart, making components easier to understand and reuse. Shared functions encapsulate recurring behaviour, while central theme files control the visual variations of the interface.
 
-## Installation & Getting Started
-
-**Prerequisite:** Node.js (the current LTS version is recommended)
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
 
 ## License
 
