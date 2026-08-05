@@ -21,15 +21,10 @@ export function renderGame(app: HTMLElement) {
   const themeConfig = getThemeConfig(gameSettings.theme);
 
   app.innerHTML = gameTemplate(themeConfig);
-
   const game = initGameState();
-
   updateHeader(app, themeConfig, game);
-
   createGameBoard(app);
-
   initCards(app, themeConfig, game);
-
   initExit(app);
 }
 
@@ -42,43 +37,26 @@ function initGameState(): GameState {
       bluePlayer: 0,
       orangePlayer: 0,
     },
-
     flippedCards: [],
-
     isProcessing: false,
   };
 }
 
-function updateHeader(
-  app: HTMLElement,
-  themeConfig: ThemeConfig,
-  game: GameState,
-) {
+function updateHeader(app: HTMLElement, themeConfig: ThemeConfig, game: GameState,) {
   const blueScore = app.querySelector("#score-blue");
   const orangeScore = app.querySelector("#score-orange");
-  const playerIcon = app.querySelector(
-    "#current-player-icon",
-  ) as HTMLImageElement | null;
+  const playerIcon = app.querySelector("#current-player-icon",) as HTMLImageElement | null;
 
   if (blueScore) {
-    blueScore.textContent = String(game.scores.bluePlayer);
-  }
-
+    blueScore.textContent = String(game.scores.bluePlayer);}
   if (orangeScore) {
-    orangeScore.textContent = String(game.scores.orangePlayer);
-  }
-
+    orangeScore.textContent = String(game.scores.orangePlayer); }
   if (playerIcon) {
-    playerIcon.src =
-      game.currentPlayer === "bluePlayer" ?
-        themeConfig.header.blueLabelIcon
-      : themeConfig.header.orangeLabelIcon;
-  }
+    playerIcon.src = game.currentPlayer === "bluePlayer" ? themeConfig.header.blueLabelIcon : themeConfig.header.orangeLabelIcon; }
 }
 
 function createGameBoard(app: HTMLElement) {
   const board = app.querySelector(".board");
-
   board?.appendChild(createBoard(gameSettings.theme, gameSettings.boards));
 }
 
@@ -97,17 +75,10 @@ function initCards(
 }
 
 function handleCardClick(
-  card: HTMLElement,
-  cards: NodeListOf<HTMLElement>,
-  app: HTMLElement,
-  themeConfig: ThemeConfig,
-  game: GameState,
-) {
-  if (game.isProcessing) return;
-
+  card: HTMLElement, cards: NodeListOf<HTMLElement>, app: HTMLElement, themeConfig: ThemeConfig, game: GameState,
+) { if (game.isProcessing) return;
   if (card.classList.contains("flipped") || card.classList.contains("matched"))
     return;
-
   card.classList.add("flipped");
   game.flippedCards.push(card);
   if (game.flippedCards.length !== 2) return;
@@ -118,25 +89,17 @@ function handleCardClick(
 }
 
 function checkMatch(
-  card1: HTMLElement,
-  card2: HTMLElement,
-  cards: NodeListOf<HTMLElement>,
-  app: HTMLElement,
-  themeConfig: ThemeConfig,
-  game: GameState,
+  card1: HTMLElement, card2: HTMLElement, cards: NodeListOf<HTMLElement>, app: HTMLElement, themeConfig: ThemeConfig, game: GameState,
 ) {
   const isMatch = card1.dataset.pairId === card2.dataset.pairId;
-
   if (isMatch) {
     card1.classList.add("matched");
     card2.classList.add("matched");
     game.scores[game.currentPlayer]++;
-
     game.flippedCards = [];
     game.isProcessing = false;
     updateHeader(app, themeConfig, game);
     checkGameFinished(cards, app, game.scores);
-
     return;
   }
 
@@ -144,11 +107,8 @@ function checkMatch(
     card1.classList.remove("flipped");
     card2.classList.remove("flipped");
     game.flippedCards = [];
-    game.currentPlayer =
-      game.currentPlayer === "bluePlayer" ? "orangePlayer" : "bluePlayer";
-
+    game.currentPlayer = game.currentPlayer === "bluePlayer" ? "orangePlayer" : "bluePlayer";
     updateHeader(app, themeConfig, game);
-
     game.isProcessing = false;
   }, 1000);
 }

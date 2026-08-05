@@ -5,19 +5,13 @@ import { drawTemplate } from "./templates/_draw-template";
 
 export function renderDraw(app: HTMLElement): void {
     const themeConfig = getThemeConfig(gameSettings.theme);
-    const backButtonText =
-        gameSettings.theme === "code-vibes"
-            ? "Back to start"
-            : "Home";
+    const backButtonText = gameSettings.theme === "code-vibes"
+            ? "Back to start" : "Home";
 
     app.innerHTML = drawTemplate(
-        themeConfig.cssClass,
-        themeConfig.draw.drawTextImg,
-        themeConfig.draw.drawIcon,
-        backButtonText
-    );
+        themeConfig.cssClass, themeConfig.draw.drawTextImg, themeConfig.draw.drawIcon, backButtonText);
 
     app.querySelector("#back-to-menu")?.addEventListener("click", () => {
-        renderSettings(app);
+        renderSettings(app); 
     });
 }

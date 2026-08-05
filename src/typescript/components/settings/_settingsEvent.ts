@@ -164,22 +164,10 @@ function updateStartPanel(app: HTMLElement) {
 
 
 function getPanelElements(app: HTMLElement) {
-    const theme = app.querySelector<HTMLButtonElement>(
-        "#selectedTheme"
-    );
-
-    const player = app.querySelector<HTMLButtonElement>(
-        "#selectedPlayer"
-    );
-
-    const board = app.querySelector<HTMLButtonElement>(
-        "#selectedBoard"
-    );
-
-    const start = app.querySelector<HTMLButtonElement>(
-        "#startBtn"
-    );
-
+    const theme = app.querySelector<HTMLButtonElement>("#selectedTheme");
+    const player = app.querySelector<HTMLButtonElement>("#selectedPlayer");
+    const board = app.querySelector<HTMLButtonElement>("#selectedBoard");
+    const start = app.querySelector<HTMLButtonElement>("#startBtn");
     if (!theme || !player || !board || !start) {
         return null;
     }
@@ -211,17 +199,12 @@ function updatePanelState(
     elements: NonNullable<ReturnType<typeof getPanelElements>>,
     app: HTMLElement
 ) {
-    const complete = Boolean(
-        gameSettings.theme &&
-        gameSettings.player &&
-        gameSettings.boards
-    );
-
+    const complete = Boolean(gameSettings.theme && gameSettings.player && gameSettings.boards);
     elements.theme.disabled = !complete;
     elements.player.disabled = !complete;
     elements.board.disabled = !complete;
     elements.start.disabled = !complete;
-
+    
     app.querySelector(".start__pannel")
         ?.classList.toggle(
             "start__pannel--disabled",

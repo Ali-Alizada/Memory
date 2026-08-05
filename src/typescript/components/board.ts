@@ -25,6 +25,5 @@ export function createBoard(themeId: string, boardSizeKey: string): HTMLElement 
     shuffle(selectedCards).forEach((card) => {
         boardEl.appendChild(createCard(card, themeConfig));
     });
-
     return boardEl;
 }

@@ -4,8 +4,7 @@ import { renderGame } from "../../game";
 
 export function renderSettings(app: HTMLElement) {
     app.innerHTML = settingsTemplate();
-
-  initSettingsEvents(app);
+    initSettingsEvents(app);
 
     const startBtn = app.querySelector("#startBtn");
     startBtn?.addEventListener("click", () => {

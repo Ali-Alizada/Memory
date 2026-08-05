@@ -20,23 +20,12 @@ export function renderWinner(
   const themeConfig = getThemeConfig(gameSettings.theme);
   const winnerName = winner === "blue" ? "Blue Player" : "Orange Player";
   const cssClass = winner === "blue" ? "blue-winner" : "orange-winner";
-
   const iconSrc =
-    winner === "blue" ?
-      themeConfig.winner.blueWinnerIcon
-      : themeConfig.winner.orangeWinnerIcon;
-
-  app.innerHTML = app.innerHTML = winnerTemplate({
-    winner,
-    winnerName,
-    cssClass,
-    iconSrc,
+  winner === "blue" ? themeConfig.winner.blueWinnerIcon : themeConfig.winner.orangeWinnerIcon;
+  app.innerHTML = winnerTemplate({
+    winner, winnerName, cssClass, iconSrc,
     themeClass: themeConfig.cssClass,
-    showConfetti: themeConfig.winner.showConfetti,
-    confettiSrc: themeConfig.winner.confettiSrc,
+    showConfetti: themeConfig.winner.showConfetti, confettiSrc: themeConfig.winner.confettiSrc,
 });
-
-  app.querySelector("#back-to-menu")?.addEventListener("click", () => {
-    renderSettings(app);
-  });
+  app.querySelector("#back-to-menu")?.addEventListener("click", () => { renderSettings(app); });
 }
