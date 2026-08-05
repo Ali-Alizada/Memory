@@ -16,7 +16,7 @@ export function homeTemplate(): string {
                 </button>
             </section>
             
-            <img class="stadia_controller" src="src/assets/images/home/Stadia_controller.svg" alt="Stadia_controller">
+            <img class="stadia_controller" src="src/assets/images/home/stadia_controller.svg" alt="Stadia_controller">
 
             <footer class="home__footer">
                 <p>© Memory Game 2026</p>
