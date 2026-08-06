@@ -1,5 +1,5 @@
-import { renderWinner } from "./_winner";
-import { renderDraw } from "./_draw";
+import { renderWinner } from "./winner";
+import { renderDraw } from "./draw";
 import { gameOverTemplate } from "./templates/_gameover-template";
 
 /**

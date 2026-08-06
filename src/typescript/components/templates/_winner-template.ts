@@ -1,5 +1,5 @@
 
-import type { WinnerSide } from "../_winner";
+import type { WinnerSide } from "../winner";
 
 interface WinnerTemplateProps {
     winner: WinnerSide;

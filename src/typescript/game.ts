@@ -1,7 +1,7 @@
 import { createExitOverlay } from "./components/overlay";
 import { createBoard } from "./components/board";
 import { gameSettings } from "./components/settings/_settingState";
-import { renderGameOver } from "./components/_gameover";
+import { renderGameOver } from "./components/gameover";
 import { renderSettings } from "./components/settings/_settings";
 import { getThemeConfig } from "./theme/index";
 import type { ThemeConfig } from "./theme/types";
