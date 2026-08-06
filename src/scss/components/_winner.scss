@@ -1,5 +1,6 @@
 @use "../abstract/variablen" as *;
 @use "../abstract/mixin" as mixins;
+@use "../abstract/animation";
 
 .winner.container__wrapper,
 .draw.container__wrapper {
@@ -145,6 +146,17 @@
 
 // ── Theme Overrides for Winner & Draw:
 
+// ── Entrance animation for all themes:
+.winner.container__wrapper,
+.draw.container__wrapper {
+    &.game-theme--code-vibes,
+    &.game-theme--gaming,
+    &.game-theme--da-projects,
+    &.game-theme--foods {
+        animation: result-screen-enter 350ms ease-out both;
+    }
+}
+
 // Gaming Theme
 .game-theme--gaming {
 
@@ -282,6 +294,33 @@
                     box-shadow: unset;
                     border: 2px solid #fb923c;
                 }
+            }
+        }
+    }
+}
+
+// ── Inner-element entrance animation (gaming, da-projects, foods):
+.winner.container__wrapper,
+.draw.container__wrapper {
+    &.game-theme--gaming,
+    &.game-theme--da-projects,
+    &.game-theme--foods {
+        .main__container {
+            h2 {
+                animation: result-content-enter 400ms ease-out 200ms both;
+            }
+
+            h3 {
+                animation: result-content-enter 400ms ease-out 300ms both;
+            }
+
+            > img,
+            .winner-content {
+                animation: result-content-enter 400ms ease-out 390ms both;
+            }
+
+            .back-btn {
+                animation: result-content-enter 400ms ease-out 480ms both;
             }
         }
     }

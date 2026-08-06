@@ -1,5 +1,6 @@
 @use "../abstract/variablen" as *;
 @use "../abstract/mixin" as mixins;
+@use "../abstract/animation";
 
 .container__wrapper {
     width: 100%;
@@ -44,6 +45,15 @@
     }
 
     // ── Theme Overrides for Game Over:
+
+    // ── Entrance animation for all themes:
+    &.game-over-page.game-theme--code-vibes,
+    &.game-over-page.game-theme--gaming,
+    &.game-over-page.game-theme--da-projects,
+    &.game-over-page.game-theme--foods {
+        animation: result-screen-enter 350ms ease-out both;
+    }
+
     &.game-over-page.game-theme--gaming {
 
         .game-over {
@@ -156,6 +166,27 @@
 
         #back-to-menu {
             width: 130px;
+        }
+    }
+}
+
+// ── Inner-element entrance animation (gaming, da-projects, foods):
+.container__wrapper.game-over-page {
+    &.game-theme--gaming,
+    &.game-theme--da-projects,
+    &.game-theme--foods {
+        .game-over .main__container {
+            h2 {
+                animation: result-content-enter 400ms ease-out 200ms both;
+            }
+
+            .scrore__container {
+                animation: result-content-enter 400ms ease-out 320ms both;
+            }
+
+            #back-to-menu {
+                animation: result-content-enter 400ms ease-out 430ms both;
+            }
         }
     }
 }
